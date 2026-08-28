@@ -1,0 +1,7 @@
+GitHub update:
+1. Open your healthy-stay-happy-channie repository.
+2. Add file > Upload files.
+3. Upload EVERYTHING inside this folder, including the assets folder.
+4. Allow GitHub to replace index.html, manifest.webmanifest, and sw.js.
+5. Commit changes.
+6. Wait about 1-2 minutes, then hard-refresh the GitHub Pages site.

@@ -1,35 +1,5 @@
-const CACHE_NAME = "happy-channie-v1";
-const ASSETS = [
-  "./",
-  "./index.html",
-  "./manifest.webmanifest",
-  "./icons/icon-192.png",
-  "./icons/icon-512.png"
-];
-
-self.addEventListener("install", event => {
-  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS)));
-  self.skipWaiting();
-});
-
-self.addEventListener("activate", event => {
-  event.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key)))
-    )
-  );
-  self.clients.claim();
-});
-
-self.addEventListener("fetch", event => {
-  if (event.request.method !== "GET") return;
-  event.respondWith(
-    fetch(event.request)
-      .then(response => {
-        const copy = response.clone();
-        caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
-        return response;
-      })
-      .catch(() => caches.match(event.request).then(r => r || caches.match("./index.html")))
-  );
-});
+const CACHE='happy-channie-v3';
+const FILES=["./", "./index.html", "./manifest.webmanifest", "./assets/members/wolfchan.png", "./assets/members/leebit.png", "./assets/members/dwaekki.png", "./assets/members/jiniret.png", "./assets/members/han-quokka.png", "./assets/members/bbokari.png", "./assets/members/puppym.png", "./assets/members/foxyin.png", "./assets/wolf/ready.png", "./assets/wolf/low-energy.png", "./assets/wolf/active.png", "./assets/wolf/rest.png", "./assets/wolf/complete.png", "./assets/wolf/pr.png", "./assets/wolf/max.png"];
+self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
+self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))));
+self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
