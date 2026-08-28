@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Healthy STAY, Happy Channie</title>
+<meta name="theme-color" content="#1d2235">
+<meta name="description" content="A playful beginner morning movement tracker for STAY.">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<style>
+:root{--accent:#956fd0;--accent2:#d9c7ee;--ink:#191927;--paper:#fffefa;--cream:#f5eee5}
+*{box-sizing:border-box}body{margin:0;background:#eee7df;color:var(--ink);font-family:Arial,sans-serif}.app{max-width:760px;margin:auto;min-height:100vh;padding:18px 18px 100px;position:relative;overflow:hidden;background:linear-gradient(#fff9,#fff9),repeating-linear-gradient(0deg,transparent 0 23px,#cfc7bd66 24px),repeating-linear-gradient(90deg,transparent 0 23px,#cfc7bd44 24px),#f5eee5}.ghost{position:absolute;font:italic 800 78px Georgia;color:#7771;right:-20px;top:35px;transform:rotate(-8deg);pointer-events:none}.hidden{display:none!important}
+header{display:flex;justify-content:space-between;position:relative;z-index:2}.brand{font-weight:900;font-size:22px;line-height:.9}.brand i{display:block;color:var(--accent);font:italic 800 27px Georgia}.sub{font:10px Georgia;color:#777;margin-top:5px}.cp{background:#1c2234;color:#fff;padding:10px 14px;border-radius:25px;font-weight:900;font-size:12px;height:max-content}
+.hero{min-height:255px;position:relative;margin-top:15px}.week{display:inline-block;background:#1c1c1c;color:#fff;padding:6px 14px;font-size:11px;font-weight:900;letter-spacing:1px;transform:rotate(-1deg)}.title{width:57%;margin:18px 0 0 5px}.member{font:italic 800 48px/.85 Georgia}.day{font-weight:950;font-size:25px;line-height:1}.purple{color:var(--accent)}.desc{font:14px/1.3 Georgia;margin-top:12px}.note{font:italic 16px Georgia;margin:18px 0 0 15px;transform:rotate(-3deg)}.photo{position:absolute;right:8px;top:24px;width:195px;height:215px;background:#fffaf5;border:8px solid white;border-bottom:32px solid white;box-shadow:0 9px 22px #0002;transform:rotate(4deg);display:grid;place-items:center;overflow:visible}.photo img{width:100%;height:100%;object-fit:contain;display:block}.photo:before{content:"";position:absolute;width:90px;height:24px;background:var(--accent2);opacity:.8;top:-16px;left:45px;transform:rotate(-4deg)}.photo:after{content:attr(data-label);position:absolute;bottom:-25px;font:italic 800 16px Georgia;color:#222}
+.content{display:grid;grid-template-columns:1.6fr .9fr;gap:17px;position:relative;z-index:2}.work{background:#fffefa;border:1px solid #d0c6bc;border-radius:26px;padding:21px;box-shadow:0 9px 22px #0001;position:relative}.work:before{content:"";position:absolute;width:90px;height:21px;background:var(--accent2);opacity:.8;top:-10px;left:30px;transform:rotate(-4deg)}h2{font:800 18px Georgia;color:var(--accent);margin:0 0 12px}.meta{font-size:10px;font-weight:900;margin-bottom:10px}.path{position:relative}.path:before{content:"";position:absolute;left:13px;top:15px;bottom:15px;border-left:2px dashed var(--accent)}.move{display:grid;grid-template-columns:31px 1fr;gap:10px;margin:13px 0;position:relative}.n{width:27px;height:27px;border:2px solid var(--accent);border-radius:50%;display:grid;place-items:center;background:#fff;font-weight:900;z-index:2}.mn{font-weight:900;font-size:13px}.cue{font-size:10px;color:#625b57;line-height:1.25}.cue b{color:var(--accent)}.baby{display:inline-block;background:var(--accent2);border:1px solid var(--accent);border-radius:25px;padding:9px 12px;font-size:10px;font-weight:900;transform:rotate(-1deg)}
+.side{display:flex;flex-direction:column;gap:18px}.progress,.mix{padding:16px;border:1px solid #cbbcaf;box-shadow:4px 5px 0 #d9cec3;position:relative}.progress{background:#fbf2e7;transform:rotate(1deg)}.mix{background:var(--accent2);transform:rotate(-2deg)}.progress:before,.mix:before{content:"";position:absolute;width:55px;height:17px;background:#e2d7c9cc;top:-9px;right:18px;transform:rotate(5deg)}h3{font:900 13px Georgia;margin:0 0 10px}.wolf{width:104px;height:92px;margin:4px auto 8px;display:grid;place-items:center}.wolf img{width:100%;height:100%;object-fit:contain;display:block}.level{text-align:center;font-weight:950}.tiny{text-align:center;font-size:10px;color:#655d58}.bar{height:7px;background:#ddd3ca;border-radius:7px;margin:9px 0}.bar span{display:block;width:62%;height:100%;background:var(--accent);border-radius:7px}.track{font:12px/1.8 "Courier New",monospace}
+.start{margin-top:24px;position:relative;z-index:3}.btn{width:100%;padding:15px;border:0;border-radius:15px;background:#1d2235;color:#fff;font-weight:950;font-size:14px}.btn.alt{margin-top:8px;background:#fffaf5;color:#222;border:1px solid #cfc4ba}
+.nav{position:fixed;z-index:20;bottom:12px;left:50%;transform:translateX(-50%);width:min(720px,calc(100% - 24px));background:#1d1f29;color:#ddd;border-radius:28px;display:flex;justify-content:space-around;padding:10px}.nav button{border:0;background:none;color:inherit;font-size:10px;text-align:center}.nav .on{color:#c19af0}
+.screen{position:relative;z-index:4}.panel{background:#fffefa;border:1px solid #d0c6bc;border-radius:24px;padding:22px;margin-top:18px;box-shadow:0 9px 22px #0001}.panel h1{font:italic 800 32px Georgia;margin:0 0 8px}.guideitem{padding:13px 0;border-bottom:1px solid #e8e0d9}.guideitem:last-child{border:0}
+.runner{min-height:78vh;display:flex;flex-direction:column;justify-content:center}.phase{text-align:center;font-size:11px;font-weight:900;color:var(--accent);letter-spacing:1px}.big{text-align:center;font:900 38px/1 Arial;margin:12px 0}.timer{text-align:center;font-size:84px;font-weight:950;line-height:1}.form{text-align:center;background:var(--accent2);padding:14px;border-radius:18px;margin:18px 0;font-size:12px}.next{background:#f4c7b7;padding:14px;border-radius:16px;font-size:13px}.check{background:#fffefa;border-radius:20px;padding:16px;margin-top:12px}.checkrow{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eee6df;font-size:12px}.checkrow.done{color:#999;text-decoration:line-through}.checkrow.current{font-weight:900;color:var(--accent)}.controls{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-top:14px}.controls button{padding:13px 5px;border:0;border-radius:13px;font-weight:900}.complete{text-align:center;padding-top:70px}.complete .yay{font:italic 800 42px Georgia;color:var(--accent)}
+.themebuttons{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.themebuttons button{border:1px solid #cfc4ba;background:#fff;padding:8px 11px;border-radius:20px;font-weight:800}
+@media(max-width:600px){.hero{min-height:285px}.member{font-size:40px}.day{font-size:21px}.photo{width:155px;height:185px;right:0}.content{grid-template-columns:1fr}.side{display:grid;grid-template-columns:1fr 1fr}.work{padding:20px 16px}.timer{font-size:76px}}
+</style>
+</head>
+<body>
+<div class="app"><div class="ghost">Stray Kids</div>
+<header><div class="brand">Healthy STAY,<i>Happy Channie</i><div class="sub">15-20 minutes. Then coffee.</div></div><div class="cp" id="cp">18 CP</div></header>
+
+<div id="today" class="screen">
+<section class="hero"><div class="week" id="week">WEEK 1 - WEDNESDAY</div><div class="title"><div class="member" id="member">Han's</div><div class="day"><span class="purple" id="daytitle">"I DON'T WANNA"</span> DAY</div><div class="desc" id="desc">Low-drama strength + mobility for the midweek struggle.</div><div class="note" id="note">Unfortunately, we are doing it anyway.</div></div><div class="photo" id="photo" data-label="HAN"><img id="memberArt" src="han-quokka.png" alt="HAN workout mascot art"></div></section>
+<div class="content"><section class="work"><h2>Today's workout</h2><div class="meta">2 ROUNDS - ABOUT 15-18 MIN</div><div class="path" id="moves"></div><div class="baby">BABY STAY - ONE ROUND - STILL COUNTS</div></section>
+<aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png" alt="Happy Channie"></div><div class="level">LEVEL 2</div><div class="tiny">18 CP - 8 CP to next level</div><div class="bar"><span></span></div><div class="tiny">Headband acquired</div></section><section class="mix"><h3 id="mixtitle">HAN'S MIX</h3><div class="track" id="tracks"></div></section></aside></div>
+<div class="start"><button class="btn" onclick="startWorkout(2)">START WORKOUT</button><button class="btn alt" onclick="startWorkout(1)">I NEED BABY STAY TODAY</button></div>
+</div>
+
+<div id="guide" class="screen hidden"><section class="panel"><h1>Movement Guide</h1><div id="guideitems"></div></section></div>
+<div id="progressScreen" class="screen hidden"><section class="panel"><h1>Happy Channie Progress</h1><p><b>18 CP - Level 2</b></p><p>Two movement days this week. Showing up counts; missed days do not erase anything.</p><div class="bar"><span></span></div><h3 style="margin-top:22px">Achievements</h3><p>First workout complete</p><p>Happy Channie Level 2</p></section></div>
+<div id="menu" class="screen hidden"><section class="panel"><h1>Theme Lab</h1><p>Same app shell, different member kit. These three prove the theme system can swap personality without rebuilding the page.</p><div class="themebuttons"><button onclick="setTheme('han')">Han</button><button onclick="setTheme('chan')">Chan</button><button onclick="setTheme('hyunjin')">Hyunjin</button></div></section></div>
+
+<div id="runner" class="screen runner hidden">
+ <div class="phase" id="phase">MOVE</div><div class="big" id="currentMove">Good Morning</div><div class="timer" id="timer">40</div>
+ <div class="form" id="formCue"></div><div class="next" id="nextbox"><b>UP NEXT:</b> <span id="nexttext"></span></div>
+ <div class="check"><h3>WORKOUT CHECKLIST</h3><div id="checklist"></div></div>
+ <div class="controls"><button onclick="backStep()">Back</button><button id="pauseBtn" onclick="togglePause()">Pause</button><button onclick="skipStep()">Skip</button></div>
+ <button class="btn alt" onclick="exitWorkout()">Exit workout</button>
+</div>
+<div id="complete" class="screen complete hidden"><div class="yay">You showed up.</div><h2>Happy Channie approves.</h2><p>Movement done. Coffee unlocked.</p><button class="btn" onclick="finishWorkout()">BACK TO TODAY</button></div>
+</div>
+
+<nav class="nav" id="nav"><button class="on" onclick="show('today',this)">Today</button><button onclick="show('guide',this)">Guide</button><button onclick="show('progressScreen',this)">Progress</button><button onclick="show('menu',this)">Menu</button></nav>
+
+<script>
+const themes={
+han:{accent:"#956fd0",accent2:"#d9c7ee",art:"han-quokka.png",member:"Han's",title:"\"I DON’T WANNA\"",desc:"Low-drama strength + mobility for the midweek struggle.",note:"Unfortunately, we are doing it anyway.",label:"HAN",mix:"HAN'S MIX",tracks:["01 Get Cool","02 Awkward Silence","03 Mixtape : Time Out","04 Cover Me (cooldown)"]},
+chan:{accent:"#6f88ad",accent2:"#cbd8e8",art:"wolfchan.png",member:"Chan's",title:"HAPPY STAY",desc:"Full-body basics with maximum Channie approval.",note:"A healthy STAY makes a happy Channie.",label:"CHAN",mix:"CHAN'S MIX",tracks:["01 MOUNTAINS","02 Chk Chk Boom","03 TOPLINE","04 Cover Me (cooldown)"]},
+hyunjin:{accent:"#b76e79",accent2:"#efd0d3",art:"jiniret.png",member:"Hyunjin's",title:"DANCERACHA",desc:"Tuesday is for dancing. The video is the workout.",note:"Drama is allowed. Suffering is optional.",label:"HYUNJIN",mix:"DANCERACHA MIX",tracks:["01 S-Class","02 MANIAC","03 LALALALA","04 Chk Chk Boom"]}
+};
+const moves=[
+["Good Morning","Push your butt BACK. Imagine Lee Know judging the hinge."],
+["Wall Push-Up","Whole body together. No booty-first push-ups."],
+["Glute Bridge","Squeeze to lift. Felix brownie-making muscles."],
+["Standing Row Squeeze","Shoulders down, elbows back. Seungmin is watching."],
+["Cat-Cow","Slow and controlled. Han supports your floor era."]
+];
+let theme="han", sequence=[],idx=0,remaining=0,tick=null,paused=false,rounds=2,counts=[0,0,0,0,0];
+
+function el(id){ return document.getElementById(id); }
+function render(){
+ const t=themes[theme];
+ document.documentElement.style.setProperty("--accent",t.accent);
+ document.documentElement.style.setProperty("--accent2",t.accent2);
+ el("member").textContent=t.member;
+ el("daytitle").textContent=t.title;
+ el("desc").textContent=t.desc;
+ el("note").textContent=t.note;
+ el("memberArt").src=t.art;
+ el("memberArt").alt=t.label+" workout mascot art";
+ el("photo").dataset.label=t.label;
+ el("mixtitle").textContent=t.mix;
+ el("tracks").innerHTML=t.tracks.join("<br>");
+ el("moves").innerHTML=moves.map((m,i)=>`<div class="move"><div class="n">${i+1}</div><div><div class="mn">${m[0]}</div><div class="cue">${m[1]}</div></div></div>`).join("");
+ el("guideitems").innerHTML=moves.map(m=>`<div class="guideitem"><b>${m[0]}</b><br><small>${m[1]}</small></div>`).join("");
+}
+function setTheme(x){theme=x;render();show("today",document.querySelector(".nav button"))}
+function show(id,btn){["today","guide","progressScreen","menu","runner","complete"].forEach(x=>document.getElementById(x).classList.add("hidden"));document.getElementById(id).classList.remove("hidden");document.getElementById("nav").classList.toggle("hidden",id==="runner"||id==="complete");document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("on"));if(btn)btn.classList.add("on");window.scrollTo(0,0)}
+function startWorkout(r){rounds=r;counts=[0,0,0,0,0];sequence=[];for(let round=1;round<=r;round++){moves.forEach((m,i)=>{sequence.push({type:"move",mi:i,round,dur:40});if(!(round===r&&i===moves.length-1))sequence.push({type:"rest",mi:i,round,dur:20})})}idx=0;show("runner");loadStep()}
+function loadStep(){clearInterval(tick);paused=false;el("pauseBtn").textContent="Pause";if(idx>=sequence.length){show("complete");return}let s=sequence[idx];remaining=s.dur;updateRunner();tick=setInterval(()=>{if(!paused){remaining--;updateRunner();if(remaining<=0){if(s.type==="move")counts[s.mi]=Math.min(rounds,counts[s.mi]+1);idx++;loadStep()}}},1000)}
+function updateRunner(){let s=sequence[idx];el("timer").textContent=remaining;if(s.type==="move"){el("phase").textContent="MOVE - ROUND "+s.round+" OF "+rounds;el("currentMove").textContent=moves[s.mi][0];el("formCue").textContent=moves[s.mi][1]}else{el("phase").textContent="REST";el("currentMove").textContent="Breathe. You earned it.";el("formCue").textContent="Rest means rest. Chan wants a healthy STAY, not bonus suffering."}let ns=sequence[idx+1];el("nexttext").textContent=ns?(ns.type==="move"?moves[ns.mi][0]+" - Round "+ns.round:moves[Math.min(ns.mi+1,4)][0]):"Finish line";renderChecklist(s)}
+function renderChecklist(s){el("checklist").innerHTML=moves.map((m,i)=>{let c=counts[i],cls="";if(s.type==="move"&&s.mi===i)cls="current";else if(c>=rounds)cls="done";let mark=c>=rounds?"DONE":c+"/"+rounds;return `<div class="checkrow ${cls}"><span>${m[0]}</span><b>${mark}</b></div>`}).join("")}
+function togglePause(){paused=!paused;el("pauseBtn").textContent=paused?"Resume":"Pause"}
+function skipStep(){let s=sequence[idx];if(s&&s.type==="move")counts[s.mi]=Math.min(rounds,counts[s.mi]+1);idx++;loadStep()}
+function backStep(){if(idx>0){idx--;loadStep()}}
+function exitWorkout(){clearInterval(tick);show("today",document.querySelector(".nav button"))}
+function finishWorkout(){clearInterval(tick);show("today",document.querySelector(".nav button"))}
+render();
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(err => {
+      console.warn("Service worker registration failed:", err);
+    });
+  });
+}
+</script>
+</body></html>
