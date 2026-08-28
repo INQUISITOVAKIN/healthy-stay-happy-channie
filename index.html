@@ -22,22 +22,216 @@ header{display:flex;justify-content:space-between;position:relative;z-index:2}.b
 .runner{min-height:78vh;display:flex;flex-direction:column;justify-content:center}.phase{text-align:center;font-size:11px;font-weight:900;color:var(--accent);letter-spacing:1px}.big{text-align:center;font:900 38px/1 Arial;margin:12px 0}.timer{text-align:center;font-size:84px;font-weight:950;line-height:1}.form{text-align:center;background:var(--accent2);padding:14px;border-radius:18px;margin:18px 0;font-size:12px}.next{background:#f4c7b7;padding:14px;border-radius:16px;font-size:13px}.check{background:#fffefa;border-radius:20px;padding:16px;margin-top:12px}.checkrow{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eee6df;font-size:12px}.checkrow.done{color:#999;text-decoration:line-through}.checkrow.current{font-weight:900;color:var(--accent)}.controls{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-top:14px}.controls button{padding:13px 5px;border:0;border-radius:13px;font-weight:900}.complete{text-align:center;padding-top:70px}.complete .yay{font:italic 800 42px Georgia;color:var(--accent)}
 .themebuttons{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.themebuttons button{border:1px solid #cfc4ba;background:#fff;padding:8px 11px;border-radius:20px;font-weight:800}
 @media(max-width:600px){.hero{min-height:285px}.member{font-size:40px}.day{font-size:21px}.photo{width:155px;height:185px;right:0}.content{grid-template-columns:1fr}.side{display:grid;grid-template-columns:1fr 1fr}.work{padding:20px 16px}.timer{font-size:76px}}
+
+/* ===== V3 STICKER WALL + COSMETIC THEMES ===== */
+body{
+  background:#e8dfd5;
+}
+
+.app{
+  max-width:1240px;
+  width:100%;
+  padding-left:24px;
+  padding-right:24px;
+  background:
+    linear-gradient(#fff9,#fff9),
+    repeating-linear-gradient(0deg,transparent 0 23px,#cfc7bd55 24px),
+    repeating-linear-gradient(90deg,transparent 0 23px,#cfc7bd33 24px),
+    #f5eee5;
+}
+
+/* Keep actual app content comfortable while letting decoration fill desktop margins */
+header,.hero,.content,.start,#guide,#progressScreen,#menu,#runner,#complete{
+  width:min(760px,100%);
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.sticker-layer{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.sticker{
+  position:absolute;
+  font-family:Arial,sans-serif;
+  color:#1d2235;
+  opacity:.76;
+  transform:rotate(var(--r,0deg));
+  filter:drop-shadow(0 2px 0 rgba(255,255,255,.55));
+}
+
+.sticker.paper{
+  background:rgba(255,253,247,.86);
+  border:1px solid rgba(94,80,68,.15);
+  padding:10px 12px;
+  box-shadow:3px 5px 0 rgba(82,69,57,.10);
+  font:700 13px/1.2 "Courier New",monospace;
+}
+
+.sticker.torn{
+  background:#181a21;
+  color:#fff;
+  padding:8px 12px;
+  font:800 13px/1.15 Arial,sans-serif;
+  clip-path:polygon(2% 4%,98% 0,96% 84%,88% 80%,79% 92%,69% 82%,58% 94%,47% 82%,36% 92%,26% 83%,14% 94%,3% 84%);
+  letter-spacing:.5px;
+}
+
+.sticker.word{
+  font:italic 900 34px/1 Georgia,serif;
+  color:color-mix(in srgb,var(--accent) 78%,#252838);
+  opacity:.26;
+  text-transform:uppercase;
+}
+
+.sticker.doodle{
+  font:900 28px/1 Arial,sans-serif;
+  color:var(--accent);
+  opacity:.58;
+}
+
+.sticker.smallword{
+  font:900 13px/1.1 "Courier New",monospace;
+  color:var(--accent);
+  border:2px solid currentColor;
+  border-radius:999px;
+  padding:7px 10px;
+  background:rgba(255,255,255,.62);
+}
+
+.sticker.brush{
+  width:190px;
+  height:42px;
+  background:var(--accent);
+  opacity:.11;
+  border-radius:45% 55% 48% 52%;
+  filter:blur(.2px);
+}
+
+.sticker.brush.thin{
+  width:140px;
+  height:18px;
+  opacity:.16;
+}
+
+/* fixed STAY-wall placements */
+.s1{left:2.5%;top:4%;--r:-8deg}
+.s2{right:2.8%;top:4.5%;--r:7deg}
+.s3{left:3%;top:19%;--r:-4deg}
+.s4{right:3.5%;top:18%;--r:9deg}
+.s5{left:1.8%;top:40%;--r:5deg}
+.s6{right:2.2%;top:38%;--r:-7deg}
+.s7{left:4%;top:68%;--r:-6deg}
+.s8{right:3%;top:67%;--r:8deg}
+.s9{left:8%;top:84%;--r:4deg}
+.s10{right:8%;top:86%;--r:-4deg}
+.s11{left:10%;top:29%;--r:-14deg}
+.s12{right:11%;top:29%;--r:13deg}
+.s13{left:8%;top:56%;--r:7deg}
+.s14{right:8%;top:55%;--r:-8deg}
+.s15{left:1.5%;top:78%;--r:-11deg}
+.s16{right:1.5%;top:79%;--r:10deg}
+.s17{left:14%;top:12%;--r:-10deg}
+.s18{right:14%;top:12%;--r:8deg}
+
+/* give the content a subtle lifted paper edge */
+.hero,.content,.start,header{
+  position:relative;
+  z-index:3;
+}
+
+/* theme accent echoes through background without becoming a new wallpaper */
+.photo:before,.work:before{
+  background:color-mix(in srgb,var(--accent2) 88%,white);
+}
+.ghost{
+  color:color-mix(in srgb,var(--accent) 10%,transparent);
+}
+
+/* Mobile: preserve chaos, remove clutter */
+@media(max-width:900px){
+  .app{padding-left:10px;padding-right:10px}
+  .sticker-layer{opacity:.72}
+  .s1,.s2,.s5,.s6,.s9,.s10,.s15,.s16{display:none}
+  .s3{left:-18px;top:17%}
+  .s4{right:-22px;top:20%}
+  .s7{left:-28px;top:73%}
+  .s8{right:-28px;top:72%}
+  .s11{left:-5px}
+  .s12{right:-8px}
+  .s13{left:-18px}
+  .s14{right:-18px}
+  .sticker.word{font-size:24px;opacity:.17}
+  .sticker.paper{font-size:10px;padding:7px 8px;opacity:.48}
+  .sticker.doodle{font-size:21px;opacity:.38}
+  .sticker.brush{width:120px;height:28px}
+}
+
+@media(max-width:600px){
+  .sticker-layer{opacity:.52}
+  .s3,.s4,.s7,.s8{display:none}
+  .s11{left:-12px;top:34%}
+  .s12{right:-12px;top:32%}
+  .s13{left:-14px;top:62%}
+  .s14{right:-16px;top:61%}
+  .s17,.s18{display:none}
+}
+
 </style>
 </head>
 <body>
-<div class="app"><div class="ghost">Stray Kids</div>
+<div class="app">
+<div class="sticker-layer" aria-hidden="true">
+  <div class="sticker torn s1">STRAY KIDS</div>
+  <div class="sticker paper s2">JUST BREATHE...<br>AND PUSH ♡</div>
+  <div class="sticker paper s3">MOVE<br>REST<br>BE HAPPY</div>
+  <div class="sticker torn s4">MAKE SOME NOISE!</div>
+  <div class="sticker paper s5">CARBS FIRST.<br>always.</div>
+  <div class="sticker paper s6">NOT PERFECT.<br>JUST SHOWING UP.</div>
+  <div class="sticker paper s7">I DON'T WANNA...<br>but let's go ♡</div>
+  <div class="sticker torn s8">STEP OUT ♡</div>
+  <div class="sticker smallword s9">STAY 4 LIFE</div>
+  <div class="sticker smallword s10">COFFEE UNLOCKED</div>
+
+  <div class="sticker doodle s11">☆ ♡ ♬</div>
+  <div class="sticker doodle s12">♬ ✦ ♡</div>
+  <div class="sticker doodle s13">♛ ᵔᴥᵔ ☆</div>
+  <div class="sticker doodle s14">♡ ♬ ✦</div>
+
+  <div class="sticker word s15">STAY</div>
+  <div class="sticker word s16">SKZ</div>
+
+  <div class="sticker brush s17"></div>
+  <div class="sticker brush thin s18"></div>
+</div>
+<div class="ghost">Stray Kids</div>
 <header><div class="brand">Healthy STAY,<i>Happy Channie</i><div class="sub">15-20 minutes. Then coffee.</div></div><div class="cp" id="cp">18 CP</div></header>
 
 <div id="today" class="screen">
 <section class="hero"><div class="week" id="week">WEEK 1 - WEDNESDAY</div><div class="title"><div class="member" id="member">Han's</div><div class="day"><span class="purple" id="daytitle">"I DON'T WANNA"</span> DAY</div><div class="desc" id="desc">Low-drama strength + mobility for the midweek struggle.</div><div class="note" id="note">Unfortunately, we are doing it anyway.</div></div><div class="photo" id="photo" data-label="HAN"><img id="memberArt" src="han-quokka.png" alt="HAN workout mascot art"></div></section>
 <div class="content"><section class="work"><h2>Today's workout</h2><div class="meta">2 ROUNDS - ABOUT 15-18 MIN</div><div class="path" id="moves"></div><div class="baby">BABY STAY - ONE ROUND - STILL COUNTS</div></section>
-<aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png" alt="Happy Channie"></div><div class="level">LEVEL 2</div><div class="tiny">18 CP - 8 CP to next level</div><div class="bar"><span></span></div><div class="tiny">Headband acquired</div></section><section class="mix"><h3 id="mixtitle">HAN'S MIX</h3><div class="track" id="tracks"></div></section></aside></div>
+<aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=5" alt="Happy Channie"></div><div class="level">LEVEL 2</div><div class="tiny">18 CP - 8 CP to next level</div><div class="bar"><span></span></div><div class="tiny">Headband acquired</div></section><section class="mix"><h3 id="mixtitle">HAN'S MIX</h3><div class="track" id="tracks"></div></section></aside></div>
 <div class="start"><button class="btn" onclick="startWorkout(2)">START WORKOUT</button><button class="btn alt" onclick="startWorkout(1)">I NEED BABY STAY TODAY</button></div>
 </div>
 
 <div id="guide" class="screen hidden"><section class="panel"><h1>Movement Guide</h1><div id="guideitems"></div></section></div>
 <div id="progressScreen" class="screen hidden"><section class="panel"><h1>Happy Channie Progress</h1><p><b>18 CP - Level 2</b></p><p>Two movement days this week. Showing up counts; missed days do not erase anything.</p><div class="bar"><span></span></div><h3 style="margin-top:22px">Achievements</h3><p>First workout complete</p><p>Happy Channie Level 2</p></section></div>
-<div id="menu" class="screen hidden"><section class="panel"><h1>Theme Lab</h1><p>Same app shell, different member kit. These three prove the theme system can swap personality without rebuilding the page.</p><div class="themebuttons"><button onclick="setTheme('han')">Han</button><button onclick="setTheme('chan')">Chan</button><button onclick="setTheme('hyunjin')">Hyunjin</button></div></section></div>
+<div id="menu" class="screen hidden"><section class="panel"><h1>Choose Your SKZOO</h1>
+    <p>This changes the featured SKZOO and accent color only. Today's workout stays today's workout.</p>
+    <div class="themebuttons">
+      <button onclick="setTheme('chan')">Chan</button>
+      <button onclick="setTheme('leeknow')">Lee Know</button>
+      <button onclick="setTheme('changbin')">Changbin</button>
+      <button onclick="setTheme('hyunjin')">Hyunjin</button>
+      <button onclick="setTheme('han')">Han</button>
+      <button onclick="setTheme('felix')">Felix</button>
+      <button onclick="setTheme('seungmin')">Seungmin</button>
+      <button onclick="setTheme('innie')">I.N</button>
+    </div></section></div>
 
 <div id="runner" class="screen runner hidden">
  <div class="phase" id="phase">MOVE</div><div class="big" id="currentMove">Good Morning</div><div class="timer" id="timer">40</div>
@@ -53,9 +247,25 @@ header{display:flex;justify-content:space-between;position:relative;z-index:2}.b
 
 <script>
 const themes={
-han:{accent:"#956fd0",accent2:"#d9c7ee",art:"han-quokka.png",member:"Han's",title:"\"I DON’T WANNA\"",desc:"Low-drama strength + mobility for the midweek struggle.",note:"Unfortunately, we are doing it anyway.",label:"HAN",mix:"HAN'S MIX",tracks:["01 Get Cool","02 Awkward Silence","03 Mixtape : Time Out","04 Cover Me (cooldown)"]},
-chan:{accent:"#6f88ad",accent2:"#cbd8e8",art:"wolfchan.png",member:"Chan's",title:"HAPPY STAY",desc:"Full-body basics with maximum Channie approval.",note:"A healthy STAY makes a happy Channie.",label:"CHAN",mix:"CHAN'S MIX",tracks:["01 MOUNTAINS","02 Chk Chk Boom","03 TOPLINE","04 Cover Me (cooldown)"]},
-hyunjin:{accent:"#b76e79",accent2:"#efd0d3",art:"jiniret.png",member:"Hyunjin's",title:"DANCERACHA",desc:"Tuesday is for dancing. The video is the workout.",note:"Drama is allowed. Suffering is optional.",label:"HYUNJIN",mix:"DANCERACHA MIX",tracks:["01 S-Class","02 MANIAC","03 LALALALA","04 Chk Chk Boom"]}
+  han:{accent:"#956fd0",accent2:"#d9c7ee",art:"han-quokka.png",label:"HAN"},
+  chan:{accent:"#6f88ad",accent2:"#cbd8e8",art:"wolfchan.png",label:"CHAN"},
+  leeknow:{accent:"#77a8c6",accent2:"#d6eaf4",art:"leebit.png",label:"LEE KNOW"},
+  changbin:{accent:"#e85d98",accent2:"#f5cadc",art:"dwaekki.png",label:"CHANGBIN"},
+  hyunjin:{accent:"#b76e79",accent2:"#efd0d3",art:"jiniret.png",label:"HYUNJIN"},
+  felix:{accent:"#deb52d",accent2:"#f7e7a0",art:"bbokari.png",label:"FELIX"},
+  seungmin:{accent:"#d49a73",accent2:"#f0d6c2",art:"puppym.png",label:"SEUNGMIN"},
+  innie:{accent:"#76aee0",accent2:"#d5e8f8",art:"foxyin.png",label:"I.N"}
+};
+
+const workout={
+  week:"WEEK 1 - WEDNESDAY",
+  member:"Han's",
+  title:'"I DON\'T WANNA"',
+  suffix:" DAY",
+  desc:"Low-drama strength + mobility for the midweek struggle.",
+  note:"Unfortunately, we are doing it anyway.",
+  mix:"HAN'S MIX",
+  tracks:["01 Get Cool","02 Awkward Silence","03 Mixtape : Time Out","04 Cover Me (cooldown)"]
 };
 const moves=[
 ["Good Morning","Push your butt BACK. Imagine Lee Know judging the hinge."],
@@ -64,24 +274,29 @@ const moves=[
 ["Standing Row Squeeze","Shoulders down, elbows back. Seungmin is watching."],
 ["Cat-Cow","Slow and controlled. Han supports your floor era."]
 ];
-let theme="han", sequence=[],idx=0,remaining=0,tick=null,paused=false,rounds=2,counts=[0,0,0,0,0];
+let theme=(localStorage.getItem("happyChannieTheme")||"han"), sequence=[],idx=0,remaining=0,tick=null,paused=false,rounds=2,counts=[0,0,0,0,0];
 
 function el(id){ return document.getElementById(id); }
 function render(){
  const t=themes[theme];
  document.documentElement.style.setProperty("--accent",t.accent);
  document.documentElement.style.setProperty("--accent2",t.accent2);
- el("member").textContent=t.member;
- el("daytitle").textContent=t.title;
- el("desc").textContent=t.desc;
- el("note").textContent=t.note;
- el("memberArt").src=t.art;
+
+ el("week").textContent=workout.week;
+ el("member").textContent=workout.member;
+ el("daytitle").textContent=workout.title;
+ el("desc").textContent=workout.desc;
+ el("note").textContent=workout.note;
+ el("memberArt").src=t.art+"?v=5";
  el("memberArt").alt=t.label+" workout mascot art";
  el("photo").dataset.label=t.label;
- el("mixtitle").textContent=t.mix;
- el("tracks").innerHTML=t.tracks.join("<br>");
+ el("mixtitle").textContent=workout.mix;
+ el("tracks").innerHTML=workout.tracks.join("<br>");
+
  el("moves").innerHTML=moves.map((m,i)=>`<div class="move"><div class="n">${i+1}</div><div><div class="mn">${m[0]}</div><div class="cue">${m[1]}</div></div></div>`).join("");
  el("guideitems").innerHTML=moves.map(m=>`<div class="guideitem"><b>${m[0]}</b><br><small>${m[1]}</small></div>`).join("");
+
+ try{localStorage.setItem("happyChannieTheme",theme)}catch(e){}
 }
 function setTheme(x){theme=x;render();show("today",document.querySelector(".nav button"))}
 function show(id,btn){["today","guide","progressScreen","menu","runner","complete"].forEach(x=>document.getElementById(x).classList.add("hidden"));document.getElementById(id).classList.remove("hidden");document.getElementById("nav").classList.toggle("hidden",id==="runner"||id==="complete");document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("on"));if(btn)btn.classList.add("on");window.scrollTo(0,0)}
@@ -98,7 +313,7 @@ render();
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js").catch(err => {
+    navigator.serviceWorker.register("./sw.js?v=5", {updateViaCache:"none"}).catch(err => {
       console.warn("Service worker registration failed:", err);
     });
   });
