@@ -990,28 +990,71 @@ header,.hero,.content,.start,.screen{position:relative}
   .hero-copy .note{font-size:18px !important;}
 }
 
+
+/* ===== V6.0 WORKOUT ACTIONS INSIDE WORKOUT CARD ===== */
+.work{
+  display:flex !important;
+  flex-direction:column !important;
+}
+
+.work-actions{
+  margin-top:auto !important;
+  padding-top:22px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  gap:10px !important;
+}
+
+.work-actions > button{
+  width:100% !important;
+  min-height:48px !important;
+  border-radius:16px !important;
+  font-weight:900 !important;
+}
+
+.work-actions > button:first-child{
+  background:#1d2235 !important;
+  color:#fff !important;
+  border:0 !important;
+}
+
+.work-actions > button:last-child{
+  background:#fffaf5 !important;
+  color:#111 !important;
+  border:1px solid #d4c8bd !important;
+}
+
+.start{display:none !important;}
+
+@media(max-width:700px){
+  .work-actions{
+    margin-top:18px !important;
+    padding-top:0 !important;
+  }
+}
+
 </style>
 </head>
 <body>
 <div class="app">
 <div class="bg-assets" aria-hidden="true">
-  <div class="bg-sticker clean01"><img src="bg-straykids.png?v=16"></div>
-  <div class="bg-sticker clean02"><img src="bg-idontwanna.png?v=16"></div>
-  <div class="bg-sticker clean03"><img src="bg-stay.png?v=16"></div>
-  <div class="bg-sticker clean04"><img src="bg-coffee.png?v=16"></div>
-  <div class="bg-sticker clean05"><img src="bg-coffeefirst.png?v=16"></div>
-  <div class="bg-sticker clean06"><img src="bg-onemore.png?v=16"></div>
+  <div class="bg-sticker clean01"><img src="bg-straykids.png?v=17"></div>
+  <div class="bg-sticker clean02"><img src="bg-idontwanna.png?v=17"></div>
+  <div class="bg-sticker clean03"><img src="bg-stay.png?v=17"></div>
+  <div class="bg-sticker clean04"><img src="bg-coffee.png?v=17"></div>
+  <div class="bg-sticker clean05"><img src="bg-coffeefirst.png?v=17"></div>
+  <div class="bg-sticker clean06"><img src="bg-onemore.png?v=17"></div>
 
-  <div class="bg-sticker clean07"><img src="bg-mixtape.png?v=16"></div>
-  <div class="bg-sticker clean08"><img src="bg-justshowing.png?v=16"></div>
-  <div class="bg-sticker clean09"><img src="bg-headphones.png?v=16"></div>
-  <div class="bg-sticker clean10"><img src="bg-letsgo.png?v=16"></div>
-  <div class="bg-sticker clean11"><img src="bg-stepout.png?v=16"></div>
+  <div class="bg-sticker clean07"><img src="bg-mixtape.png?v=17"></div>
+  <div class="bg-sticker clean08"><img src="bg-justshowing.png?v=17"></div>
+  <div class="bg-sticker clean09"><img src="bg-headphones.png?v=17"></div>
+  <div class="bg-sticker clean10"><img src="bg-letsgo.png?v=17"></div>
+  <div class="bg-sticker clean11"><img src="bg-stepout.png?v=17"></div>
 
-  <div class="bg-sticker tiny clean12"><img src="bg-purplecrown.png?v=16"></div>
-  <div class="bg-sticker tiny clean13"><img src="bg-bluetoothpaw.png?v=16"></div>
-  <div class="bg-sticker tiny clean14"><img src="bg-musicnote.png?v=16"></div>
-  <div class="bg-sticker tiny clean15"><img src="bg-sparkle.png?v=16"></div>
+  <div class="bg-sticker tiny clean12"><img src="bg-purplecrown.png?v=17"></div>
+  <div class="bg-sticker tiny clean13"><img src="bg-bluetoothpaw.png?v=17"></div>
+  <div class="bg-sticker tiny clean14"><img src="bg-musicnote.png?v=17"></div>
+  <div class="bg-sticker tiny clean15"><img src="bg-sparkle.png?v=17"></div>
 </div>
 <div class="ghost">Stray Kids</div>
 <header><div class="brand">Healthy STAY,<i>Happy Channie</i><div class="sub">15-20 minutes. Then coffee.</div></div><div class="cp" id="cp">0 CP</div></header>
@@ -1020,14 +1063,16 @@ header,.hero,.content,.start,.screen{position:relative}
 <div class="desktop-layout">
   <div class="left-column">
     <section class="hero-copy"><div class="week" id="week">WEEK 1 - WEDNESDAY</div><div class="title"><div class="member" id="member">Han's</div><div class="day"><span class="purple" id="daytitle">"I DON'T WANNA"</span> DAY</div><div class="desc" id="desc">Low-drama strength + mobility for the midweek struggle.</div><div class="note" id="note">Unfortunately, we are doing it anyway.</div></div></section>
-    <section class="work"><h2>Today's workout</h2><div class="meta">2 ROUNDS - ABOUT 15-18 MIN</div><div class="path" id="moves"></div><div class="baby">BABY STAY - ONE ROUND - STILL COUNTS</div></section>
+    <section class="work"><h2>Today's workout</h2><div class="meta">2 ROUNDS - ABOUT 15-18 MIN</div><div class="path" id="moves"></div><div class="baby">BABY STAY - ONE ROUND - STILL COUNTS</div><div class="work-actions">
+<button class="btn" onclick="startWorkout(2)">START WORKOUT</button><button class="btn alt" onclick="startWorkout(1)">I NEED BABY STAY TODAY</button>
+</div></section>
   </div>
   <div class="right-column">
     <div class="photo" id="photo" data-label="HAN"><img id="memberArt" src="han-quokka.png" alt="HAN workout mascot art"></div>
-    <aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=16" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">HAN'S MIX</h3><div class="track" id="tracks"></div></section></aside>
+    <aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=17" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">HAN'S MIX</h3><div class="track" id="tracks"></div></section></aside>
   </div>
 </div>
-<div class="start"><button class="btn" onclick="startWorkout(2)">START WORKOUT</button><button class="btn alt" onclick="startWorkout(1)">I NEED BABY STAY TODAY</button></div>
+
 </div>
 
 <div id="guide" class="screen hidden"><section class="panel"><h1>Movement Guide</h1><div id="guideitems"></div></section></div>
@@ -1160,7 +1205,7 @@ function render(){
  el("daytitle").textContent=workout.title;
  el("desc").textContent=workout.desc;
  el("note").textContent=workout.note;
- el("memberArt").src=t.art+"?v=16";
+ el("memberArt").src=t.art+"?v=17";
  el("memberArt").alt=t.label+" workout mascot art";
  el("photo").dataset.label=t.label;
  el("mixtitle").textContent=workout.mix;
@@ -1173,7 +1218,7 @@ function render(){
 function setTheme(x){if(!themes[x])return;theme=x;if(!themes[theme])theme="han";
 render();show("today",document.querySelector(".nav button"))}
 function show(id,btn){["today","guide","progressScreen","menu","runner","complete"].forEach(x=>document.getElementById(x).classList.add("hidden"));document.getElementById(id).classList.remove("hidden");document.getElementById("nav").classList.toggle("hidden",id==="runner"||id==="complete");document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("on"));if(btn)btn.classList.add("on");window.scrollTo(0,0)}
-function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=16"}
+function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=17"}
 function startWorkout(r){setChannie(r===1?"low-energy":"active");sessionAwarded=false;rounds=r;counts=[0,0,0,0,0];sequence=[];for(let round=1;round<=r;round++){moves.forEach((m,i)=>{sequence.push({type:"move",mi:i,round,dur:40});if(!(round===r&&i===moves.length-1))sequence.push({type:"rest",mi:i,round,dur:20})})}idx=0;show("runner");loadStep()}
 function loadStep(){clearInterval(tick);paused=false;el("pauseBtn").textContent="Pause";if(idx>=sequence.length){setChannie("complete");if(!sessionAwarded){awardWorkout();sessionAwarded=true}show("complete");return}let s=sequence[idx];remaining=s.dur;updateRunner();tick=setInterval(()=>{if(!paused){remaining--;updateRunner();if(remaining<=0){if(s.type==="move")counts[s.mi]=Math.min(rounds,counts[s.mi]+1);idx++;loadStep()}}},1000)}
 function updateRunner(){let s=sequence[idx];setChannie(s.type==="rest"?"rest":"active");el("timer").textContent=remaining;if(s.type==="move"){el("phase").textContent="MOVE - ROUND "+s.round+" OF "+rounds;el("currentMove").textContent=moves[s.mi][0];el("formCue").textContent=moves[s.mi][1]}else{el("phase").textContent="REST";el("currentMove").textContent="Breathe. You earned it.";el("formCue").textContent="Rest means rest. Chan wants a healthy STAY, not bonus suffering."}let ns=sequence[idx+1];el("nexttext").textContent=ns?(ns.type==="move"?moves[ns.mi][0]+" - Round "+ns.round:moves[Math.min(ns.mi+1,4)][0]):"Finish line";renderChecklist(s)}
@@ -1187,7 +1232,7 @@ render();
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=16",{updateViaCache:"none"}).catch(err => {
+    navigator.serviceWorker.register("./sw.js?v=17",{updateViaCache:"none"}).catch(err => {
       console.warn("Service worker registration failed:", err);
     });
   });
