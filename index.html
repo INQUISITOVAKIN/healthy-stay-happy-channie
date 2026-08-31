@@ -23,14 +23,14 @@ header{display:flex;justify-content:space-between;position:relative;z-index:2}.b
 .themebuttons{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.themebuttons button{border:1px solid #cfc4ba;background:#fff;padding:8px 11px;border-radius:20px;font-weight:800}
 @media(max-width:600px){.hero{min-height:285px}.member{font-size:40px}.day{font-size:21px}.photo{width:155px;height:185px;right:0}.content{grid-template-columns:1fr}.side{display:grid;grid-template-columns:1fr 1fr}.work{padding:20px 16px}.timer{font-size:76px}}
 
-/* ===== V4 ILLUSTRATED STICKER WALL ===== */
+/* ===== STABILIZED V5: REAL STICKER ASSET BACKGROUND ===== */
 body{
   margin:0;
   background:#e8dfd5;
   overflow-x:hidden;
 }
 .app{
-  max-width:1360px;
+  max-width:1380px;
   width:100%;
   min-height:100vh;
   margin:0 auto;
@@ -38,154 +38,154 @@ body{
   position:relative;
   overflow:hidden;
   background:
-    linear-gradient(rgba(255,255,255,.62),rgba(255,255,255,.62)),
-    repeating-linear-gradient(0deg,transparent 0 23px,#cfc7bd55 24px),
-    repeating-linear-gradient(90deg,transparent 0 23px,#cfc7bd35 24px),
+    linear-gradient(rgba(255,255,255,.66),rgba(255,255,255,.66)),
+    repeating-linear-gradient(0deg,transparent 0 23px,#cfc7bd50 24px),
+    repeating-linear-gradient(90deg,transparent 0 23px,#cfc7bd30 24px),
     #f5eee5;
-  box-shadow:0 0 28px rgba(44,35,28,.10);
+  box-shadow:0 0 30px rgba(50,40,32,.11);
 }
 header,.hero,.content,.start,#guide,#progressScreen,#menu,#runner,#complete{
-  width:min(780px,100%);
+  width:min(800px,100%);
   margin-left:auto;
   margin-right:auto;
   position:relative;
-  z-index:4;
+  z-index:5;
 }
-.ghost{
-  z-index:1;
-  font-size:96px;
-  opacity:.7;
-}
-.sticker-wall{
+.bg-assets{
   position:absolute;
   inset:0;
-  z-index:2;
+  z-index:1;
   pointer-events:none;
   overflow:hidden;
 }
-.st{
+.bg-sticker{
   position:absolute;
   width:var(--w,120px);
-  opacity:var(--o,.95);
+  opacity:var(--o,.78);
   transform:rotate(var(--r,0deg));
-  filter:drop-shadow(0 4px 6px rgba(45,36,28,.12));
+  filter:drop-shadow(0 4px 5px rgba(46,36,28,.10));
 }
-.st svg{display:block;width:100%;height:auto;overflow:visible}
-.st text{font-family:Arial,sans-serif;font-weight:900}
-.st .hand{font-family:"Comic Sans MS","Trebuchet MS",sans-serif;font-weight:700;font-style:italic}
-.st .accent{fill:var(--accent)}
-.st .accentStroke{stroke:var(--accent)}
-.st .cream{fill:#fffdf7}
-.st .ink{fill:#171923}
-.st .muted{fill:#6e665f}
-.st .paper{fill:#fffaf1}
-.st .outline{stroke:#171923;stroke-width:5;stroke-linejoin:round;stroke-linecap:round}
-.st .whiteOutline{stroke:#fffdf9;stroke-width:12;stroke-linejoin:round;stroke-linecap:round}
-.st .thin{stroke-width:3}
+.bg-sticker.soft{opacity:var(--o,.48)}
+.bg-sticker.behind{opacity:var(--o,.32)}
+.bg-sticker img{display:block;width:100%;height:auto}
 
-/* Desktop composition: deliberately asymmetrical / layered */
-.st1{left:1.2%;top:3%;--w:145px;--r:-8deg}
-.st2{left:3.5%;top:18%;--w:118px;--r:-4deg}
-.st3{left:1.8%;top:35%;--w:150px;--r:7deg}
-.st4{left:4%;top:56%;--w:122px;--r:-7deg}
-.st5{left:1%;top:75%;--w:150px;--r:5deg}
-.st6{left:10%;top:85%;--w:120px;--r:-4deg}
-.st7{left:11%;top:8%;--w:105px;--r:8deg}
+/* left collage */
+.bg01{left:-18px;top:20px;--w:185px;--r:-8deg;--o:.72}
+.bg02{left:26px;top:165px;--w:175px;--r:-5deg;--o:.66}
+.bg03{left:-8px;top:385px;--w:150px;--r:7deg;--o:.58}
+.bg04{left:56px;top:560px;--w:128px;--r:-9deg;--o:.55}
+.bg05{left:-18px;top:740px;--w:168px;--r:5deg;--o:.60}
+.bg06{left:105px;top:890px;--w:148px;--r:-4deg;--o:.45}
+.bg07{left:165px;top:295px;--w:100px;--r:8deg;--o:.38}
+.bg08{left:180px;top:690px;--w:108px;--r:-5deg;--o:.38}
 
-.st8{right:1.5%;top:4%;--w:145px;--r:8deg}
-.st9{right:3%;top:19%;--w:128px;--r:-7deg}
-.st10{right:1.4%;top:36%;--w:150px;--r:6deg}
-.st11{right:4%;top:57%;--w:120px;--r:-5deg}
-.st12{right:1.2%;top:73%;--w:152px;--r:8deg}
-.st13{right:10%;top:86%;--w:120px;--r:-6deg}
-.st14{right:11%;top:9%;--w:100px;--r:-9deg}
+/* right collage */
+.bg09{right:-15px;top:28px;--w:170px;--r:8deg;--o:.66}
+.bg10{right:38px;top:182px;--w:160px;--r:-6deg;--o:.62}
+.bg11{right:-15px;top:382px;--w:165px;--r:7deg;--o:.58}
+.bg12{right:52px;top:560px;--w:135px;--r:-6deg;--o:.54}
+.bg13{right:-18px;top:745px;--w:170px;--r:8deg;--o:.57}
+.bg14{right:95px;top:900px;--w:150px;--r:-5deg;--o:.43}
+.bg15{right:170px;top:300px;--w:105px;--r:-10deg;--o:.35}
+.bg16{right:180px;top:700px;--w:110px;--r:7deg;--o:.36}
 
-.st15{left:16%;top:29%;--w:90px;--r:-11deg;--o:.7}
-.st16{right:16%;top:29%;--w:88px;--r:9deg;--o:.7}
-.st17{left:15%;top:65%;--w:92px;--r:7deg;--o:.66}
-.st18{right:15%;top:64%;--w:96px;--r:-8deg;--o:.66}
+/* pieces that intentionally disappear under the app */
+.bg17{left:20%;top:115px;--w:260px;--r:-8deg;--o:.14}
+.bg18{right:18%;top:275px;--w:240px;--r:10deg;--o:.13}
+.bg19{left:17%;top:610px;--w:250px;--r:-6deg;--o:.11}
+.bg20{right:17%;top:800px;--w:260px;--r:8deg;--o:.12}
 
-/* translucent brush marks under content */
-.brush{
-  position:absolute;
-  background:var(--accent);
-  opacity:.10;
-  border-radius:48% 52% 44% 56%;
-  filter:blur(.2px);
-  transform:rotate(var(--r,0deg));
+.ghost{
+  z-index:2;
+  opacity:.55;
+  font-size:96px;
+  color:color-mix(in srgb,var(--accent) 13%,transparent);
 }
-.b1{left:8%;top:12%;width:280px;height:58px;--r:-8deg}
-.b2{right:8%;top:27%;width:240px;height:52px;--r:11deg}
-.b3{left:4%;top:69%;width:320px;height:60px;--r:-5deg}
-.b4{right:5%;top:78%;width:250px;height:48px;--r:8deg}
 
-/* Strong, always-visible bottom nav */
+/* Nav is deliberately outside the decorative stacking context */
 .nav{
   position:fixed !important;
   left:50% !important;
-  bottom:14px !important;
+  bottom:12px !important;
   transform:translateX(-50%) !important;
-  width:min(760px,calc(100vw - 28px)) !important;
+  width:min(760px,calc(100vw - 24px)) !important;
   display:flex !important;
   justify-content:space-around !important;
   align-items:center !important;
   padding:10px 12px !important;
-  background:#171b29 !important;
-  border-radius:24px !important;
-  z-index:9999 !important;
-  box-shadow:0 10px 28px rgba(0,0,0,.26) !important;
+  border-radius:26px !important;
+  background:#1d1f29 !important;
+  z-index:2147483000 !important;
+  box-shadow:0 10px 30px rgba(0,0,0,.28) !important;
 }
 .nav.hidden{display:none !important}
 .nav button{
-  min-width:72px;
+  border:0 !important;
+  background:transparent !important;
+  color:#f7f3ed !important;
+  min-width:76px;
   min-height:38px;
-  color:#fff !important;
-  opacity:.9;
+  font-size:10px !important;
 }
-.nav .on{
-  color:var(--accent2) !important;
-  opacity:1;
-  text-shadow:0 0 14px color-mix(in srgb,var(--accent) 40%,transparent);
+.nav .on{color:var(--accent2) !important}
+
+/* Keep UI above background */
+header,.hero,.content,.start,.screen{position:relative}
+.work,.progress,.mix,.panel{box-shadow:0 10px 20px rgba(55,44,36,.075)}
+.photo{box-shadow:0 12px 24px rgba(55,44,36,.16)}
+
+/* Reset controls */
+.resetbox{
+  margin-top:24px;
+  padding-top:18px;
+  border-top:1px dashed #cfc4ba;
+}
+.resetbox h3{font-size:16px;margin-bottom:7px}
+.resetbox p{font-size:12px;line-height:1.4;color:#655d58}
+.reset-actions{display:flex;gap:8px;flex-wrap:wrap}
+.reset-actions button{
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid #cfc4ba;
+  background:#fffaf5;
+  color:#222;
+  font-weight:900;
+  font-size:11px;
+}
+.reset-actions .danger{
+  background:#1d2235;
+  color:#fff;
+  border-color:#1d2235;
 }
 
-/* A bit more depth on the actual app blocks */
-.work,.progress,.mix,.panel{
-  box-shadow:0 10px 20px rgba(56,45,37,.08);
-}
-.photo{
-  box-shadow:0 12px 24px rgba(52,42,34,.18);
-}
-
-@media(max-width:980px){
+/* responsive: desktop gets the full journal; mobile gets strategic cropped fragments */
+@media(max-width:1000px){
   .app{padding-left:14px;padding-right:14px}
-  .sticker-wall{opacity:.78}
-  .st1,.st3,.st5,.st8,.st10,.st12{display:none}
-  .st2{left:-18px;top:16%}
-  .st4{left:-18px;top:56%}
-  .st6{left:-20px;top:85%}
-  .st9{right:-20px;top:18%}
-  .st11{right:-18px;top:57%}
-  .st13{right:-18px;top:85%}
-  .st7,.st14{opacity:.5}
-  .st15,.st16,.st17,.st18{opacity:.38}
-  .b1,.b2,.b3,.b4{opacity:.07}
+  .bg01,.bg03,.bg05,.bg09,.bg11,.bg13{display:none}
+  .bg02{left:-42px;top:180px;--w:125px}
+  .bg04{left:-38px;top:590px;--w:105px}
+  .bg06{left:-38px;top:900px;--w:110px}
+  .bg10{right:-40px;top:190px;--w:120px}
+  .bg12{right:-38px;top:600px;--w:108px}
+  .bg14{right:-40px;top:900px;--w:112px}
+  .bg07,.bg08,.bg15,.bg16{opacity:.23}
+  .bg17,.bg18,.bg19,.bg20{opacity:.08}
 }
 @media(max-width:600px){
-  .app{padding:14px 10px 110px}
-  .sticker-wall{opacity:.52}
-  .st2,.st4,.st6,.st9,.st11,.st13{display:none}
-  .st7{left:-22px;top:11%;--w:82px}
-  .st14{right:-20px;top:11%;--w:78px}
-  .st15{left:-28px;top:38%;--w:70px}
-  .st16{right:-26px;top:39%;--w:70px}
-  .st17{left:-25px;top:71%;--w:72px}
-  .st18{right:-25px;top:72%;--w:72px}
-  .ghost{font-size:70px}
+  .app{padding:14px 10px 108px}
+  .bg-assets{opacity:.53}
+  .bg02,.bg04,.bg06,.bg10,.bg12,.bg14{display:none}
+  .bg07{left:-35px;top:31%;--w:72px}
+  .bg08{left:-30px;top:72%;--w:74px}
+  .bg15{right:-35px;top:33%;--w:72px}
+  .bg16{right:-32px;top:74%;--w:76px}
+  .bg17,.bg18,.bg19,.bg20{display:none}
+  .ghost{font-size:68px;opacity:.38}
   .nav{
-    width:calc(100vw - 18px) !important;
-    bottom:8px !important;
+    bottom:7px !important;
+    width:calc(100vw - 16px) !important;
     border-radius:20px !important;
-    padding:8px 6px !important;
+    padding:7px 5px !important;
   }
   .nav button{min-width:0;font-size:9px !important}
 }
@@ -194,188 +194,65 @@ header,.hero,.content,.start,#guide,#progressScreen,#menu,#runner,#complete{
 </head>
 <body>
 <div class="app">
-<div class="sticker-wall" aria-hidden="true">
-  <div class="brush b1"></div><div class="brush b2"></div><div class="brush b3"></div><div class="brush b4"></div>
+<div class="bg-assets" aria-hidden="true">
+  <div class="bg-sticker bg01"><img src="sticker-straykids.png?v=7"></div>
+  <div class="bg-sticker bg02"><img src="sticker-idontwanna.png?v=7"></div>
+  <div class="bg-sticker bg03"><img src="sticker-coffee-big.png?v=7"></div>
+  <div class="bg-sticker bg04"><img src="sticker-stay.png?v=7"></div>
+  <div class="bg-sticker bg05"><img src="sticker-coffeefirst.png?v=7"></div>
+  <div class="bg-sticker soft bg06"><img src="sticker-scribbles.png?v=7"></div>
+  <div class="bg-sticker soft bg07"><img src="sticker-sparkles.png?v=7"></div>
+  <div class="bg-sticker soft bg08"><img src="sticker-paws.png?v=7"></div>
 
-  <div class="st st1">
-    <svg viewBox="0 0 180 100">
-      <path class="whiteOutline" fill="#171923" d="M14 20 L165 8 L172 77 L22 91 Z"/>
-      <path fill="#171923" d="M14 20 L165 8 L172 77 L22 91 Z"/>
-      <text x="32" y="52" fill="white" font-size="24" transform="rotate(-4 32 52)">STRAY</text>
-      <text x="85" y="75" class="accent" font-size="25">KIDS</text>
-      <path d="M23 79 Q65 62 150 70" fill="none" class="accentStroke" stroke-width="5"/>
-    </svg>
-  </div>
+  <div class="bg-sticker bg09"><img src="sticker-mixtape-big.png?v=7"></div>
+  <div class="bg-sticker bg10"><img src="sticker-justshowing.png?v=7"></div>
+  <div class="bg-sticker bg11"><img src="sticker-headphones.png?v=7"></div>
+  <div class="bg-sticker bg12"><img src="sticker-letsgo.png?v=7"></div>
+  <div class="bg-sticker bg13"><img src="sticker-stepout.png?v=7"></div>
+  <div class="bg-sticker soft bg14"><img src="sticker-tapes.png?v=7"></div>
+  <div class="bg-sticker soft bg15"><img src="sticker-music-hearts.png?v=7"></div>
+  <div class="bg-sticker soft bg16"><img src="sticker-compass.png?v=7"></div>
 
-  <div class="st st2">
-    <svg viewBox="0 0 150 120">
-      <path class="whiteOutline" fill="#fff9ef" d="M10 8 H140 V105 L125 113 110 106 95 114 80 107 65 115 50 107 35 114 10 105 Z"/>
-      <path fill="#fff9ef" stroke="#cfc2b6" stroke-width="2" d="M10 8 H140 V105 L125 113 110 106 95 114 80 107 65 115 50 107 35 114 10 105 Z"/>
-      <text class="hand ink" x="24" y="40" font-size="17">JUST BREATHE...</text>
-      <text class="hand accent" x="29" y="66" font-size="18">AND PUSH ♡</text>
-      <path d="M24 77 Q78 91 124 78" fill="none" class="accentStroke thin"/>
-    </svg>
-  </div>
-
-  <div class="st st3">
-    <svg viewBox="0 0 170 120">
-      <rect class="whiteOutline paper" x="10" y="10" width="150" height="100" rx="8"/>
-      <rect class="paper" stroke="#d8ccc0" stroke-width="2" x="10" y="10" width="150" height="100" rx="8"/>
-      <circle cx="39" cy="37" r="9" fill="none" class="accentStroke" stroke-width="4"/>
-      <path d="M34 37 l4 4 8-10" fill="none" class="accentStroke" stroke-width="4"/>
-      <text class="ink" x="55" y="43" font-size="15">MOVE</text>
-      <circle cx="39" cy="64" r="9" fill="none" class="accentStroke" stroke-width="4"/>
-      <text class="ink" x="55" y="70" font-size="15">REST</text>
-      <circle cx="39" cy="91" r="9" fill="none" class="accentStroke" stroke-width="4"/>
-      <text class="ink" x="55" y="97" font-size="15">BE HAPPY</text>
-    </svg>
-  </div>
-
-  <div class="st st4">
-    <svg viewBox="0 0 150 150">
-      <path class="whiteOutline" fill="#fffaf1" d="M21 33 Q75 0 129 33 L139 112 Q76 146 12 111 Z"/>
-      <path fill="#fffaf1" stroke="#171923" stroke-width="4" d="M21 33 Q75 0 129 33 L139 112 Q76 146 12 111 Z"/>
-      <path d="M50 28 Q71 11 95 27" fill="none" class="accentStroke" stroke-width="7"/>
-      <path d="M44 54 Q75 37 108 55 Q102 101 76 111 Q49 101 44 54 Z" fill="none" class="outline"/>
-      <path d="M56 67 Q75 52 96 68" fill="none" class="accentStroke" stroke-width="5"/>
-      <circle cx="63" cy="76" r="5" class="ink"/><circle cx="91" cy="76" r="5" class="ink"/>
-      <path d="M65 91 Q77 101 90 91" fill="none" class="outline thin"/>
-      <text x="45" y="133" class="accent" font-size="16">STAY ♡</text>
-    </svg>
-  </div>
-
-  <div class="st st5">
-    <svg viewBox="0 0 170 115">
-      <path class="whiteOutline" fill="#171923" d="M10 17 L158 8 L164 91 L18 105 Z"/>
-      <path fill="#171923" d="M10 17 L158 8 L164 91 L18 105 Z"/>
-      <text class="hand" x="30" y="48" fill="white" font-size="21">MAKE SOME</text>
-      <text class="hand accent" x="37" y="77" font-size="27">NOISE!</text>
-      <path d="M32 86 H132" class="accentStroke" stroke-width="4"/>
-    </svg>
-  </div>
-
-  <div class="st st6">
-    <svg viewBox="0 0 160 105">
-      <rect class="whiteOutline paper" x="9" y="10" width="142" height="84" rx="8"/>
-      <rect class="paper" stroke="#d8ccc0" stroke-width="2" x="9" y="10" width="142" height="84" rx="8"/>
-      <text class="hand ink" x="26" y="39" font-size="16">I DON'T WANNA...</text>
-      <text class="hand accent" x="37" y="66" font-size="19">but let's go ♡</text>
-    </svg>
-  </div>
-
-  <div class="st st7">
-    <svg viewBox="0 0 130 130">
-      <path class="whiteOutline paper" d="M65 10 L83 45 L120 49 L92 75 L101 113 L65 94 L29 113 L38 75 L10 49 L47 45 Z"/>
-      <path class="paper outline" d="M65 10 L83 45 L120 49 L92 75 L101 113 L65 94 L29 113 L38 75 L10 49 L47 45 Z"/>
-      <path d="M41 69 Q65 42 89 69" fill="none" class="accentStroke" stroke-width="7"/>
-      <path d="M48 77 Q65 91 82 77" fill="none" class="outline thin"/>
-      <circle cx="50" cy="66" r="4" class="ink"/><circle cx="81" cy="66" r="4" class="ink"/>
-    </svg>
-  </div>
-
-  <div class="st st8">
-    <svg viewBox="0 0 160 110">
-      <path class="whiteOutline" fill="#171923" d="M8 18 L149 7 L155 89 L19 103 Z"/>
-      <path fill="#171923" d="M8 18 L149 7 L155 89 L19 103 Z"/>
-      <text x="24" y="45" fill="white" font-size="18">STEP</text>
-      <text x="43" y="76" class="accent" font-size="30">OUT</text>
-      <path d="M104 31 l12 17 23 3-16 13 6 22-20-11-19 11 5-22-16-13 23-3z" fill="none" class="accentStroke" stroke-width="4"/>
-    </svg>
-  </div>
-
-  <div class="st st9">
-    <svg viewBox="0 0 150 130">
-      <path class="whiteOutline paper" d="M22 15 H126 V103 H22 Z"/>
-      <path class="paper" stroke="#d7c9bc" stroke-width="2" d="M22 15 H126 V103 H22 Z"/>
-      <path d="M45 47 H104 V88 H45 Z" fill="#171923"/>
-      <circle cx="60" cy="66" r="11" fill="#fffaf1"/><circle cx="91" cy="66" r="11" fill="#fffaf1"/>
-      <circle cx="60" cy="66" r="5" class="accent"/><circle cx="91" cy="66" r="5" class="accent"/>
-      <path d="M48 37 Q75 27 102 37" fill="none" class="accentStroke" stroke-width="5"/>
-      <text x="41" y="118" class="ink" font-size="14">MIXTAPE</text>
-    </svg>
-  </div>
-
-  <div class="st st10">
-    <svg viewBox="0 0 160 130">
-      <path class="whiteOutline paper" d="M35 12 Q80 1 124 16 L145 94 Q82 126 18 95 Z"/>
-      <path class="paper outline" d="M35 12 Q80 1 124 16 L145 94 Q82 126 18 95 Z"/>
-      <path d="M58 62 Q80 33 104 62" fill="none" class="accentStroke" stroke-width="8"/>
-      <path d="M45 66 Q24 80 34 102" fill="none" class="outline" stroke-width="8"/>
-      <path d="M115 66 Q136 80 126 102" fill="none" class="outline" stroke-width="8"/>
-      <text x="49" y="118" class="accent" font-size="14">PLAY IT LOUD</text>
-    </svg>
-  </div>
-
-  <div class="st st11">
-    <svg viewBox="0 0 140 140">
-      <path class="whiteOutline paper" d="M22 18 H118 V118 H22 Z"/>
-      <path class="paper" stroke="#d8ccc0" stroke-width="2" d="M22 18 H118 V118 H22 Z"/>
-      <path d="M50 91 H90 L84 44 H56 Z" fill="#d2a16e" stroke="#171923" stroke-width="4"/>
-      <path d="M51 51 H89" stroke="#fff" stroke-width="3"/>
-      <path d="M65 44 L78 15" class="accentStroke" stroke-width="5"/>
-      <text x="46" y="110" class="ink" font-size="13">COFFEE</text>
-    </svg>
-  </div>
-
-  <div class="st st12">
-    <svg viewBox="0 0 170 120">
-      <path class="whiteOutline paper" d="M11 17 H160 V102 H11 Z"/>
-      <path class="paper" stroke="#d7cabe" stroke-width="2" d="M11 17 H160 V102 H11 Z"/>
-      <text class="hand ink" x="25" y="48" font-size="18">NOT PERFECT.</text>
-      <text class="hand accent" x="22" y="75" font-size="19">JUST SHOWING UP.</text>
-      <path d="M26 87 Q82 100 143 85" fill="none" class="accentStroke thin"/>
-    </svg>
-  </div>
-
-  <div class="st st13">
-    <svg viewBox="0 0 150 100">
-      <path class="whiteOutline paper" d="M10 15 H140 V85 H10 Z"/>
-      <path class="paper outline" d="M10 15 H140 V85 H10 Z"/>
-      <text x="25" y="49" class="accent" font-size="21">STAY 4 LIFE</text>
-      <path d="M110 59 c18-15 29 6 10 20-18-13-28-34-10-20z" fill="none" class="accentStroke" stroke-width="4"/>
-    </svg>
-  </div>
-
-  <div class="st st14">
-    <svg viewBox="0 0 150 120">
-      <path class="whiteOutline paper" d="M21 13 H130 V105 H21 Z"/>
-      <path class="paper outline" d="M21 13 H130 V105 H21 Z"/>
-      <path d="M41 62 L54 43 67 62 80 43 93 62 107 43" fill="none" class="accentStroke" stroke-width="6"/>
-      <path d="M45 78 H105" class="outline"/>
-      <text x="42" y="100" class="ink" font-size="14">SKZ ♡</text>
-    </svg>
-  </div>
-
-  <div class="st st15"><svg viewBox="0 0 100 100"><path class="whiteOutline" fill="none" d="M20 52 q30-35 60 0 q-30 38-60 0z"/><path fill="none" class="accentStroke" stroke-width="7" d="M20 52 q30-35 60 0 q-30 38-60 0z"/><circle cx="50" cy="50" r="8" class="ink"/></svg></div>
-  <div class="st st16"><svg viewBox="0 0 100 100"><path class="whiteOutline" fill="none" d="M50 8 L62 39 95 42 70 63 78 95 50 78 22 95 30 63 5 42 38 39 Z"/><path fill="none" class="accentStroke" stroke-width="6" d="M50 8 L62 39 95 42 70 63 78 95 50 78 22 95 30 63 5 42 38 39 Z"/></svg></div>
-  <div class="st st17"><svg viewBox="0 0 100 100"><path class="whiteOutline" fill="none" d="M30 70 Q12 48 28 35 Q42 25 51 42 Q61 24 75 35 Q91 49 72 70 L51 91 Z"/><path fill="none" class="accentStroke" stroke-width="7" d="M30 70 Q12 48 28 35 Q42 25 51 42 Q61 24 75 35 Q91 49 72 70 L51 91 Z"/></svg></div>
-  <div class="st st18"><svg viewBox="0 0 100 100"><path class="whiteOutline" fill="none" d="M25 78 L52 17 47 54 78 47 Z"/><path fill="none" class="accentStroke" stroke-width="7" d="M25 78 L52 17 47 54 78 47 Z"/></svg></div>
+  <div class="bg-sticker behind bg17"><img src="sticker-brush-blackred.png?v=7"></div>
+  <div class="bg-sticker behind bg18"><img src="sticker-doodle-cluster.png?v=7"></div>
+  <div class="bg-sticker behind bg19"><img src="sticker-ink-checker.png?v=7"></div>
+  <div class="bg-sticker behind bg20"><img src="sticker-paper-tape.png?v=7"></div>
 </div>
 <div class="ghost">Stray Kids</div>
-<header><div class="brand">Healthy STAY,<i>Happy Channie</i><div class="sub">15-20 minutes. Then coffee.</div></div><div class="cp" id="cp">18 CP</div></header>
+<header><div class="brand">Healthy STAY,<i>Happy Channie</i><div class="sub">15-20 minutes. Then coffee.</div></div><div class="cp" id="cp">0 CP</div></header>
 
 <div id="today" class="screen">
 <section class="hero"><div class="week" id="week">WEEK 1 - WEDNESDAY</div><div class="title"><div class="member" id="member">Han's</div><div class="day"><span class="purple" id="daytitle">"I DON'T WANNA"</span> DAY</div><div class="desc" id="desc">Low-drama strength + mobility for the midweek struggle.</div><div class="note" id="note">Unfortunately, we are doing it anyway.</div></div><div class="photo" id="photo" data-label="HAN"><img id="memberArt" src="han-quokka.png" alt="HAN workout mascot art"></div></section>
 <div class="content"><section class="work"><h2>Today's workout</h2><div class="meta">2 ROUNDS - ABOUT 15-18 MIN</div><div class="path" id="moves"></div><div class="baby">BABY STAY - ONE ROUND - STILL COUNTS</div></section>
-<aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=6" alt="Happy Channie"></div><div class="level">LEVEL 2</div><div class="tiny">18 CP - 8 CP to next level</div><div class="bar"><span></span></div><div class="tiny">Headband acquired</div></section><section class="mix"><h3 id="mixtitle">HAN'S MIX</h3><div class="track" id="tracks"></div></section></aside></div>
+<aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=7" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">HAN'S MIX</h3><div class="track" id="tracks"></div></section></aside></div>
 <div class="start"><button class="btn" onclick="startWorkout(2)">START WORKOUT</button><button class="btn alt" onclick="startWorkout(1)">I NEED BABY STAY TODAY</button></div>
 </div>
 
 <div id="guide" class="screen hidden"><section class="panel"><h1>Movement Guide</h1><div id="guideitems"></div></section></div>
-<div id="progressScreen" class="screen hidden"><section class="panel"><h1>Happy Channie Progress</h1><p><b>18 CP - Level 2</b></p><p>Two movement days this week. Showing up counts; missed days do not erase anything.</p><div class="bar"><span></span></div><h3 style="margin-top:22px">Achievements</h3><p>First workout complete</p><p>Happy Channie Level 2</p></section></div>
-<div id="menu" class="screen hidden"><section class="panel"><h1>Choose Your SKZOO</h1>
-    <p>This changes the featured SKZOO and accent color only. Today's workout stays today's workout.</p>
-    <div class="themebuttons">
-      <button onclick="setTheme('chan')">Chan</button>
-      <button onclick="setTheme('leeknow')">Lee Know</button>
-      <button onclick="setTheme('changbin')">Changbin</button>
-      <button onclick="setTheme('hyunjin')">Hyunjin</button>
-      <button onclick="setTheme('han')">Han</button>
-      <button onclick="setTheme('felix')">Felix</button>
-      <button onclick="setTheme('seungmin')">Seungmin</button>
-      <button onclick="setTheme('innie')">I.N</button>
-    </div></section></div>
-
+<div id="progressScreen" class="screen hidden"><section class="panel"><h1>Happy Channie Progress</h1><p><b id="progressSummary">0 CP - Level 1</b></p><p>Two movement days this week. Showing up counts; missed days do not erase anything.</p><div class="bar"><span></span></div><h3 style="margin-top:22px">Achievements</h3><p>First workout complete</p><p>Happy Channie Level 2</p></section></div>
+<div id="menu" class="screen hidden"><section class="panel">
+<h1>Menu</h1>
+<h3>Choose Your SKZOO</h3>
+<p style="font-size:12px;color:#655d58">This changes only the featured SKZOO and accent color. Today's workout stays today's workout.</p>
+<div class="themebuttons">
+<button onclick="setTheme('chan')">Chan</button>
+<button onclick="setTheme('leeknow')">Lee Know</button>
+<button onclick="setTheme('changbin')">Changbin</button>
+<button onclick="setTheme('hyunjin')">Hyunjin</button>
+<button onclick="setTheme('han')">Han</button>
+<button onclick="setTheme('felix')">Felix</button>
+<button onclick="setTheme('seungmin')">Seungmin</button>
+<button onclick="setTheme('innie')">I.N</button>
+</div>
+<div class="resetbox">
+<h3>Reset App Data</h3>
+<p><b>Reset Progress</b> clears workout/test history, CP, achievements, skipped/completed-day metadata and challenge state, but keeps your chosen SKZOO theme.</p>
+<div class="reset-actions">
+<button onclick="resetProgress()">RESET PROGRESS</button>
+<button class="danger" onclick="resetEverything()">RESET EVERYTHING</button>
+</div>
+</div>
+</section></div>
 <div id="runner" class="screen runner hidden">
  <div class="phase" id="phase">MOVE</div><div class="big" id="currentMove">Good Morning</div><div class="timer" id="timer">40</div>
  <div class="form" id="formCue"></div><div class="next" id="nextbox"><b>UP NEXT:</b> <span id="nexttext"></span></div>
@@ -390,24 +267,24 @@ header,.hero,.content,.start,#guide,#progressScreen,#menu,#runner,#complete{
 
 <script>
 const themes={
-  han:{accent:"#956fd0",accent2:"#d9c7ee",art:"han-quokka.png",label:"HAN"},
-  chan:{accent:"#6f88ad",accent2:"#cbd8e8",art:"wolfchan.png",label:"CHAN"},
-  leeknow:{accent:"#77a8c6",accent2:"#d6eaf4",art:"leebit.png",label:"LEE KNOW"},
-  changbin:{accent:"#e85d98",accent2:"#f5cadc",art:"dwaekki.png",label:"CHANGBIN"},
-  hyunjin:{accent:"#b76e79",accent2:"#efd0d3",art:"jiniret.png",label:"HYUNJIN"},
-  felix:{accent:"#deb52d",accent2:"#f7e7a0",art:"bbokari.png",label:"FELIX"},
-  seungmin:{accent:"#d49a73",accent2:"#f0d6c2",art:"puppym.png",label:"SEUNGMIN"},
-  innie:{accent:"#76aee0",accent2:"#d5e8f8",art:"foxyin.png",label:"I.N"}
+han:{accent:"#956fd0",accent2:"#d9c7ee",art:"han-quokka.png",label:"HAN"},
+chan:{accent:"#6f88ad",accent2:"#cbd8e8",art:"wolfchan.png",label:"CHAN"},
+leeknow:{accent:"#7e9bc4",accent2:"#d8e3f1",art:"leebit.png",label:"LEE KNOW"},
+changbin:{accent:"#c87582",accent2:"#efd0d5",art:"dwaekki.png",label:"CHANGBIN"},
+hyunjin:{accent:"#c87582",accent2:"#efd0d5",art:"jiniret.png",label:"HYUNJIN"},
+felix:{accent:"#e5b85c",accent2:"#f6e7bf",art:"bbokari.png",label:"FELIX"},
+seungmin:{accent:"#d79a78",accent2:"#f2d9ca",art:"puppym.png",label:"SEUNGMIN"},
+innie:{accent:"#7e9bc4",accent2:"#d8e3f1",art:"foxyin.png",label:"I.N"}
 };
 
 const workout={
-  week:"WEEK 1 - WEDNESDAY",
-  member:"Han's",
-  title:'"I DON\'T WANNA"',
-  desc:"Low-drama strength + mobility for the midweek struggle.",
-  note:"Unfortunately, we are doing it anyway.",
-  mix:"HAN'S MIX",
-  tracks:["01 Get Cool","02 Awkward Silence","03 Mixtape : Time Out","04 Cover Me (cooldown)"]
+week:"WEEK 1 - WEDNESDAY",
+member:"Han's",
+title:'"I DON\'T WANNA"',
+desc:"Low-drama strength + mobility for the midweek struggle.",
+note:"Unfortunately, we are doing it anyway.",
+mix:"HAN'S MIX",
+tracks:["01 Get Cool","02 Awkward Silence","03 Mixtape : Time Out","04 Cover Me (cooldown)"]
 };
 const moves=[
 ["Good Morning","Push your butt BACK. Imagine Lee Know judging the hinge."],
@@ -416,9 +293,63 @@ const moves=[
 ["Standing Row Squeeze","Shoulders down, elbows back. Seungmin is watching."],
 ["Cat-Cow","Slow and controlled. Han supports your floor era."]
 ];
-let theme=(localStorage.getItem("happyChannieTheme")||"han"), sequence=[],idx=0,remaining=0,tick=null,paused=false,rounds=2,counts=[0,0,0,0,0];
+let theme=(localStorage.getItem("happyChannieTheme")||"han"), sequence=[],idx=0,remaining=0,tick=null,paused=false,rounds=2,counts=[0,0,0,0,0],sessionAwarded=false;
+if(!themes[theme]) theme="han";
 
 function el(id){ return document.getElementById(id); }
+
+const PROGRESS_KEY="happyChannieProgressV1";
+function freshProgress(){return {cp:0,completedDays:[],skippedDays:[],achievements:[],week:1,dayIndex:0,workoutsCompleted:0};}
+function getProgress(){
+ try{
+   const raw=localStorage.getItem(PROGRESS_KEY);
+   if(!raw)return freshProgress();
+   return Object.assign(freshProgress(),JSON.parse(raw));
+ }catch(e){return freshProgress();}
+}
+function saveProgress(p){try{localStorage.setItem(PROGRESS_KEY,JSON.stringify(p))}catch(e){}}
+function levelInfo(cp){
+ if(cp<=10)return {level:1,next:11,label:"Fresh start"};
+ if(cp<=25)return {level:2,next:26,label:"Headband acquired"};
+ if(cp<=45)return {level:3,next:46,label:"A healthy STAY makes a happy Channie"};
+ return {level:4,next:null,label:"I'M FOIVE. Thriving."};
+}
+function updateProgressUI(){
+ const p=getProgress(), info=levelInfo(p.cp);
+ if(el("cp"))el("cp").textContent=p.cp+" CP";
+ if(el("levelLabel"))el("levelLabel").textContent="LEVEL "+info.level;
+ if(el("levelSub"))el("levelSub").textContent=info.next ? `${p.cp} CP - ${Math.max(0,info.next-p.cp)} CP to next level` : `${p.cp} CP - MAX LEVEL`;
+ if(el("unlockText"))el("unlockText").textContent=info.label;
+ if(el("progressSummary"))el("progressSummary").textContent=`${p.cp} CP - Level ${info.level}`;
+ const bar=document.querySelector(".progress .bar span");
+ if(bar){
+   const starts=[0,11,26,46], ends=[10,25,45,60];
+   const i=info.level-1;
+   const pct=Math.max(0,Math.min(100,((p.cp-starts[i])/(ends[i]-starts[i]+1))*100));
+   bar.style.width=pct+"%";
+ }
+}
+function awardWorkout(){
+ const p=getProgress();
+ p.cp+=3;
+ p.workoutsCompleted=(p.workoutsCompleted||0)+1;
+ saveProgress(p);
+ updateProgressUI();
+}
+function resetProgress(){
+ if(!confirm("Reset all workout progress and testing data? Your selected SKZOO theme will stay."))return;
+ const keepTheme=localStorage.getItem("happyChannieTheme")||"han";
+ localStorage.clear();
+ localStorage.setItem("happyChannieTheme",keepTheme);
+ localStorage.setItem(PROGRESS_KEY,JSON.stringify(freshProgress()));
+ location.reload();
+}
+function resetEverything(){
+ if(!confirm("Reset EVERYTHING, including your selected SKZOO theme?"))return;
+ localStorage.clear();
+ location.reload();
+}
+
 function render(){
  const t=themes[theme];
  document.documentElement.style.setProperty("--accent",t.accent);
@@ -428,7 +359,7 @@ function render(){
  el("daytitle").textContent=workout.title;
  el("desc").textContent=workout.desc;
  el("note").textContent=workout.note;
- el("memberArt").src=t.art+"?v=6";
+ el("memberArt").src=t.art+"?v=7";
  el("memberArt").alt=t.label+" workout mascot art";
  el("photo").dataset.label=t.label;
  el("mixtitle").textContent=workout.mix;
@@ -436,23 +367,25 @@ function render(){
  el("moves").innerHTML=moves.map((m,i)=>`<div class="move"><div class="n">${i+1}</div><div><div class="mn">${m[0]}</div><div class="cue">${m[1]}</div></div></div>`).join("");
  el("guideitems").innerHTML=moves.map(m=>`<div class="guideitem"><b>${m[0]}</b><br><small>${m[1]}</small></div>`).join("");
  try{localStorage.setItem("happyChannieTheme",theme)}catch(e){}
+ updateProgressUI();
 }
-function setTheme(x){theme=x;render();show("today",document.querySelector(".nav button"))}
+function setTheme(x){if(!themes[x])return;theme=x;render();show("today",document.querySelector(".nav button"))}
 function show(id,btn){["today","guide","progressScreen","menu","runner","complete"].forEach(x=>document.getElementById(x).classList.add("hidden"));document.getElementById(id).classList.remove("hidden");document.getElementById("nav").classList.toggle("hidden",id==="runner"||id==="complete");document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("on"));if(btn)btn.classList.add("on");window.scrollTo(0,0)}
-function startWorkout(r){rounds=r;counts=[0,0,0,0,0];sequence=[];for(let round=1;round<=r;round++){moves.forEach((m,i)=>{sequence.push({type:"move",mi:i,round,dur:40});if(!(round===r&&i===moves.length-1))sequence.push({type:"rest",mi:i,round,dur:20})})}idx=0;show("runner");loadStep()}
-function loadStep(){clearInterval(tick);paused=false;el("pauseBtn").textContent="Pause";if(idx>=sequence.length){show("complete");return}let s=sequence[idx];remaining=s.dur;updateRunner();tick=setInterval(()=>{if(!paused){remaining--;updateRunner();if(remaining<=0){if(s.type==="move")counts[s.mi]=Math.min(rounds,counts[s.mi]+1);idx++;loadStep()}}},1000)}
-function updateRunner(){let s=sequence[idx];el("timer").textContent=remaining;if(s.type==="move"){el("phase").textContent="MOVE - ROUND "+s.round+" OF "+rounds;el("currentMove").textContent=moves[s.mi][0];el("formCue").textContent=moves[s.mi][1]}else{el("phase").textContent="REST";el("currentMove").textContent="Breathe. You earned it.";el("formCue").textContent="Rest means rest. Chan wants a healthy STAY, not bonus suffering."}let ns=sequence[idx+1];el("nexttext").textContent=ns?(ns.type==="move"?moves[ns.mi][0]+" - Round "+ns.round:moves[Math.min(ns.mi+1,4)][0]):"Finish line";renderChecklist(s)}
+function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=7"}
+function startWorkout(r){setChannie(r===1?"low-energy":"active");sessionAwarded=false;rounds=r;counts=[0,0,0,0,0];sequence=[];for(let round=1;round<=r;round++){moves.forEach((m,i)=>{sequence.push({type:"move",mi:i,round,dur:40});if(!(round===r&&i===moves.length-1))sequence.push({type:"rest",mi:i,round,dur:20})})}idx=0;show("runner");loadStep()}
+function loadStep(){clearInterval(tick);paused=false;el("pauseBtn").textContent="Pause";if(idx>=sequence.length){setChannie("complete");if(!sessionAwarded){awardWorkout();sessionAwarded=true}show("complete");return}let s=sequence[idx];remaining=s.dur;updateRunner();tick=setInterval(()=>{if(!paused){remaining--;updateRunner();if(remaining<=0){if(s.type==="move")counts[s.mi]=Math.min(rounds,counts[s.mi]+1);idx++;loadStep()}}},1000)}
+function updateRunner(){let s=sequence[idx];setChannie(s.type==="rest"?"rest":"active");el("timer").textContent=remaining;if(s.type==="move"){el("phase").textContent="MOVE - ROUND "+s.round+" OF "+rounds;el("currentMove").textContent=moves[s.mi][0];el("formCue").textContent=moves[s.mi][1]}else{el("phase").textContent="REST";el("currentMove").textContent="Breathe. You earned it.";el("formCue").textContent="Rest means rest. Chan wants a healthy STAY, not bonus suffering."}let ns=sequence[idx+1];el("nexttext").textContent=ns?(ns.type==="move"?moves[ns.mi][0]+" - Round "+ns.round:moves[Math.min(ns.mi+1,4)][0]):"Finish line";renderChecklist(s)}
 function renderChecklist(s){el("checklist").innerHTML=moves.map((m,i)=>{let c=counts[i],cls="";if(s.type==="move"&&s.mi===i)cls="current";else if(c>=rounds)cls="done";let mark=c>=rounds?"DONE":c+"/"+rounds;return `<div class="checkrow ${cls}"><span>${m[0]}</span><b>${mark}</b></div>`}).join("")}
 function togglePause(){paused=!paused;el("pauseBtn").textContent=paused?"Resume":"Pause"}
 function skipStep(){let s=sequence[idx];if(s&&s.type==="move")counts[s.mi]=Math.min(rounds,counts[s.mi]+1);idx++;loadStep()}
 function backStep(){if(idx>0){idx--;loadStep()}}
-function exitWorkout(){clearInterval(tick);show("today",document.querySelector(".nav button"))}
-function finishWorkout(){clearInterval(tick);show("today",document.querySelector(".nav button"))}
+function exitWorkout(){clearInterval(tick);setChannie("ready");show("today",document.querySelector(".nav button"))}
+function finishWorkout(){clearInterval(tick);setChannie("ready");show("today",document.querySelector(".nav button"))}
 render();
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=6",{updateViaCache:"none"}).catch(err => {
+    navigator.serviceWorker.register("./sw.js?v=7",{updateViaCache:"none"}).catch(err => {
       console.warn("Service worker registration failed:", err);
     });
   });
