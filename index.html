@@ -336,28 +336,116 @@ header,.hero,.content,.start,.screen{position:relative}
   .title{width:52% !important}
 }
 
+
+/* ===== V5.4 FEATURED ART ZONE ENLARGEMENT ===== */
+.hero{
+  min-height:400px !important;
+  padding-top:6px !important;
+}
+.photo{
+  width:340px !important;
+  height:360px !important;
+  right:-18px !important;
+  top:0 !important;
+  border-width:12px !important;
+  border-bottom-width:48px !important;
+}
+.photo img{
+  width:100% !important;
+  height:100% !important;
+  left:0 !important;
+  bottom:0 !important;
+  object-fit:contain !important;
+}
+.photo:before{
+  width:126px !important;
+  height:30px !important;
+  left:102px !important;
+  top:-20px !important;
+}
+.photo:after{
+  bottom:-38px !important;
+  font-size:21px !important;
+}
+.title{
+  width:48% !important;
+}
+.content{
+  margin-top:8px !important;
+}
+
+@media(max-width:900px){
+  .hero{
+    min-height:350px !important;
+  }
+  .photo{
+    width:265px !important;
+    height:295px !important;
+    right:-10px !important;
+    top:8px !important;
+    border-width:10px !important;
+    border-bottom-width:40px !important;
+  }
+  .photo:before{
+    width:105px !important;
+    height:26px !important;
+    left:76px !important;
+    top:-17px !important;
+  }
+  .photo:after{
+    bottom:-31px !important;
+    font-size:18px !important;
+  }
+  .title{width:52% !important}
+}
+
+@media(max-width:600px){
+  .hero{
+    min-height:315px !important;
+  }
+  .photo{
+    width:200px !important;
+    height:230px !important;
+    right:-8px !important;
+    top:20px !important;
+    border-width:8px !important;
+    border-bottom-width:34px !important;
+  }
+  .photo:before{
+    width:88px !important;
+    height:22px !important;
+    left:55px !important;
+    top:-14px !important;
+  }
+  .photo:after{
+    bottom:-27px !important;
+    font-size:16px !important;
+  }
+  .title{width:54% !important}
+}
+
 </style>
 </head>
 <body>
 <div class="app">
 <div class="bg-assets" aria-hidden="true">
-  <div class="bg-sticker clean01"><img src="bg-straykids.png?v=10"></div>
-  <div class="bg-sticker clean02"><img src="bg-idontwanna.png?v=10"></div>
-  <div class="bg-sticker clean03"><img src="bg-stay.png?v=10"></div>
-  <div class="bg-sticker clean04"><img src="bg-coffee.png?v=10"></div>
-  <div class="bg-sticker clean05"><img src="bg-coffeefirst.png?v=10"></div>
-  <div class="bg-sticker clean06"><img src="bg-onemore.png?v=10"></div>
+  <div class="bg-sticker clean01"><img src="bg-straykids.png?v=11"></div>
+  <div class="bg-sticker clean02"><img src="bg-idontwanna.png?v=11"></div>
+  <div class="bg-sticker clean03"><img src="bg-stay.png?v=11"></div>
+  <div class="bg-sticker clean04"><img src="bg-coffee.png?v=11"></div>
+  <div class="bg-sticker clean05"><img src="bg-coffeefirst.png?v=11"></div>
+  <div class="bg-sticker clean06"><img src="bg-onemore.png?v=11"></div>
 
-  <div class="bg-sticker clean07"><img src="bg-mixtape.png?v=10"></div>
-  <div class="bg-sticker clean08"><img src="bg-justshowing.png?v=10"></div>
-  <div class="bg-sticker clean09"><img src="bg-headphones.png?v=10"></div>
-  <div class="bg-sticker clean10"><img src="bg-letsgo.png?v=10"></div>
-  <div class="bg-sticker clean11"><img src="bg-stepout.png?v=10"></div>
+  <div class="bg-sticker clean07"><img src="bg-mixtape.png?v=11"></div>
+  <div class="bg-sticker clean08"><img src="bg-justshowing.png?v=11"></div>
+  <div class="bg-sticker clean09"><img src="bg-headphones.png?v=11"></div>
+  <div class="bg-sticker clean10"><img src="bg-letsgo.png?v=11"></div>
+  <div class="bg-sticker clean11"><img src="bg-stepout.png?v=11"></div>
 
-  <div class="bg-sticker tiny clean12"><img src="bg-purplecrown.png?v=10"></div>
-  <div class="bg-sticker tiny clean13"><img src="bg-bluetoothpaw.png?v=10"></div>
-  <div class="bg-sticker tiny clean14"><img src="bg-musicnote.png?v=10"></div>
-  <div class="bg-sticker tiny clean15"><img src="bg-sparkle.png?v=10"></div>
+  <div class="bg-sticker tiny clean12"><img src="bg-purplecrown.png?v=11"></div>
+  <div class="bg-sticker tiny clean13"><img src="bg-bluetoothpaw.png?v=11"></div>
+  <div class="bg-sticker tiny clean14"><img src="bg-musicnote.png?v=11"></div>
+  <div class="bg-sticker tiny clean15"><img src="bg-sparkle.png?v=11"></div>
 </div>
 <div class="ghost">Stray Kids</div>
 <header><div class="brand">Healthy STAY,<i>Happy Channie</i><div class="sub">15-20 minutes. Then coffee.</div></div><div class="cp" id="cp">0 CP</div></header>
@@ -365,7 +453,7 @@ header,.hero,.content,.start,.screen{position:relative}
 <div id="today" class="screen">
 <section class="hero"><div class="week" id="week">WEEK 1 - WEDNESDAY</div><div class="title"><div class="member" id="member">Han's</div><div class="day"><span class="purple" id="daytitle">"I DON'T WANNA"</span> DAY</div><div class="desc" id="desc">Low-drama strength + mobility for the midweek struggle.</div><div class="note" id="note">Unfortunately, we are doing it anyway.</div></div><div class="photo" id="photo" data-label="HAN"><img id="memberArt" src="han-quokka.png" alt="HAN workout mascot art"></div></section>
 <div class="content"><section class="work"><h2>Today's workout</h2><div class="meta">2 ROUNDS - ABOUT 15-18 MIN</div><div class="path" id="moves"></div><div class="baby">BABY STAY - ONE ROUND - STILL COUNTS</div></section>
-<aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=10" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">HAN'S MIX</h3><div class="track" id="tracks"></div></section></aside></div>
+<aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=11" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">HAN'S MIX</h3><div class="track" id="tracks"></div></section></aside></div>
 <div class="start"><button class="btn" onclick="startWorkout(2)">START WORKOUT</button><button class="btn alt" onclick="startWorkout(1)">I NEED BABY STAY TODAY</button></div>
 </div>
 
@@ -499,7 +587,7 @@ function render(){
  el("daytitle").textContent=workout.title;
  el("desc").textContent=workout.desc;
  el("note").textContent=workout.note;
- el("memberArt").src=t.art+"?v=10";
+ el("memberArt").src=t.art+"?v=11";
  el("memberArt").alt=t.label+" workout mascot art";
  el("photo").dataset.label=t.label;
  el("mixtitle").textContent=workout.mix;
@@ -512,7 +600,7 @@ function render(){
 function setTheme(x){if(!themes[x])return;theme=x;if(!themes[theme])theme="han";
 render();show("today",document.querySelector(".nav button"))}
 function show(id,btn){["today","guide","progressScreen","menu","runner","complete"].forEach(x=>document.getElementById(x).classList.add("hidden"));document.getElementById(id).classList.remove("hidden");document.getElementById("nav").classList.toggle("hidden",id==="runner"||id==="complete");document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("on"));if(btn)btn.classList.add("on");window.scrollTo(0,0)}
-function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=10"}
+function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=11"}
 function startWorkout(r){setChannie(r===1?"low-energy":"active");sessionAwarded=false;rounds=r;counts=[0,0,0,0,0];sequence=[];for(let round=1;round<=r;round++){moves.forEach((m,i)=>{sequence.push({type:"move",mi:i,round,dur:40});if(!(round===r&&i===moves.length-1))sequence.push({type:"rest",mi:i,round,dur:20})})}idx=0;show("runner");loadStep()}
 function loadStep(){clearInterval(tick);paused=false;el("pauseBtn").textContent="Pause";if(idx>=sequence.length){setChannie("complete");if(!sessionAwarded){awardWorkout();sessionAwarded=true}show("complete");return}let s=sequence[idx];remaining=s.dur;updateRunner();tick=setInterval(()=>{if(!paused){remaining--;updateRunner();if(remaining<=0){if(s.type==="move")counts[s.mi]=Math.min(rounds,counts[s.mi]+1);idx++;loadStep()}}},1000)}
 function updateRunner(){let s=sequence[idx];setChannie(s.type==="rest"?"rest":"active");el("timer").textContent=remaining;if(s.type==="move"){el("phase").textContent="MOVE - ROUND "+s.round+" OF "+rounds;el("currentMove").textContent=moves[s.mi][0];el("formCue").textContent=moves[s.mi][1]}else{el("phase").textContent="REST";el("currentMove").textContent="Breathe. You earned it.";el("formCue").textContent="Rest means rest. Chan wants a healthy STAY, not bonus suffering."}let ns=sequence[idx+1];el("nexttext").textContent=ns?(ns.type==="move"?moves[ns.mi][0]+" - Round "+ns.round:moves[Math.min(ns.mi+1,4)][0]):"Finish line";renderChecklist(s)}
@@ -526,7 +614,7 @@ render();
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=10",{updateViaCache:"none"}).catch(err => {
+    navigator.serviceWorker.register("./sw.js?v=11",{updateViaCache:"none"}).catch(err => {
       console.warn("Service worker registration failed:", err);
     });
   });
