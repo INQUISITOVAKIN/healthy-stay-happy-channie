@@ -1033,28 +1033,73 @@ header,.hero,.content,.start,.screen{position:relative}
   }
 }
 
+
+/* ===== V6.1 ACTUAL LEFT-COLUMN WORKOUT ACTIONS ===== */
+.left-column > .work{
+  display:flex !important;
+  flex-direction:column !important;
+}
+
+.left-column > .work .work-actions{
+  margin-top:auto !important;
+  padding-top:22px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  gap:10px !important;
+}
+
+.left-column > .work .work-actions button{
+  width:100% !important;
+  min-height:48px !important;
+  border-radius:16px !important;
+  font-weight:900 !important;
+  cursor:pointer !important;
+}
+
+.left-column > .work .work-actions button:first-child{
+  background:#1d2235 !important;
+  color:white !important;
+  border:0 !important;
+}
+
+.left-column > .work .work-actions button:last-child{
+  background:#fffaf5 !important;
+  color:#111 !important;
+  border:1px solid #d4c8bd !important;
+}
+
+/* no legacy standalone workout controls */
+.start{display:none !important;}
+
+@media(max-width:700px){
+  .left-column > .work .work-actions{
+    margin-top:18px !important;
+    padding-top:0 !important;
+  }
+}
+
 </style>
 </head>
 <body>
 <div class="app">
 <div class="bg-assets" aria-hidden="true">
-  <div class="bg-sticker clean01"><img src="bg-straykids.png?v=17"></div>
-  <div class="bg-sticker clean02"><img src="bg-idontwanna.png?v=17"></div>
-  <div class="bg-sticker clean03"><img src="bg-stay.png?v=17"></div>
-  <div class="bg-sticker clean04"><img src="bg-coffee.png?v=17"></div>
-  <div class="bg-sticker clean05"><img src="bg-coffeefirst.png?v=17"></div>
-  <div class="bg-sticker clean06"><img src="bg-onemore.png?v=17"></div>
+  <div class="bg-sticker clean01"><img src="bg-straykids.png?v=18"></div>
+  <div class="bg-sticker clean02"><img src="bg-idontwanna.png?v=18"></div>
+  <div class="bg-sticker clean03"><img src="bg-stay.png?v=18"></div>
+  <div class="bg-sticker clean04"><img src="bg-coffee.png?v=18"></div>
+  <div class="bg-sticker clean05"><img src="bg-coffeefirst.png?v=18"></div>
+  <div class="bg-sticker clean06"><img src="bg-onemore.png?v=18"></div>
 
-  <div class="bg-sticker clean07"><img src="bg-mixtape.png?v=17"></div>
-  <div class="bg-sticker clean08"><img src="bg-justshowing.png?v=17"></div>
-  <div class="bg-sticker clean09"><img src="bg-headphones.png?v=17"></div>
-  <div class="bg-sticker clean10"><img src="bg-letsgo.png?v=17"></div>
-  <div class="bg-sticker clean11"><img src="bg-stepout.png?v=17"></div>
+  <div class="bg-sticker clean07"><img src="bg-mixtape.png?v=18"></div>
+  <div class="bg-sticker clean08"><img src="bg-justshowing.png?v=18"></div>
+  <div class="bg-sticker clean09"><img src="bg-headphones.png?v=18"></div>
+  <div class="bg-sticker clean10"><img src="bg-letsgo.png?v=18"></div>
+  <div class="bg-sticker clean11"><img src="bg-stepout.png?v=18"></div>
 
-  <div class="bg-sticker tiny clean12"><img src="bg-purplecrown.png?v=17"></div>
-  <div class="bg-sticker tiny clean13"><img src="bg-bluetoothpaw.png?v=17"></div>
-  <div class="bg-sticker tiny clean14"><img src="bg-musicnote.png?v=17"></div>
-  <div class="bg-sticker tiny clean15"><img src="bg-sparkle.png?v=17"></div>
+  <div class="bg-sticker tiny clean12"><img src="bg-purplecrown.png?v=18"></div>
+  <div class="bg-sticker tiny clean13"><img src="bg-bluetoothpaw.png?v=18"></div>
+  <div class="bg-sticker tiny clean14"><img src="bg-musicnote.png?v=18"></div>
+  <div class="bg-sticker tiny clean15"><img src="bg-sparkle.png?v=18"></div>
 </div>
 <div class="ghost">Stray Kids</div>
 <header><div class="brand">Healthy STAY,<i>Happy Channie</i><div class="sub">15-20 minutes. Then coffee.</div></div><div class="cp" id="cp">0 CP</div></header>
@@ -1062,14 +1107,15 @@ header,.hero,.content,.start,.screen{position:relative}
 <div id="today" class="screen">
 <div class="desktop-layout">
   <div class="left-column">
-    <section class="hero-copy"><div class="week" id="week">WEEK 1 - WEDNESDAY</div><div class="title"><div class="member" id="member">Han's</div><div class="day"><span class="purple" id="daytitle">"I DON'T WANNA"</span> DAY</div><div class="desc" id="desc">Low-drama strength + mobility for the midweek struggle.</div><div class="note" id="note">Unfortunately, we are doing it anyway.</div></div></section>
-    <section class="work"><h2>Today's workout</h2><div class="meta">2 ROUNDS - ABOUT 15-18 MIN</div><div class="path" id="moves"></div><div class="baby">BABY STAY - ONE ROUND - STILL COUNTS</div><div class="work-actions">
+    <section class="hero-copy"><div class="week" id="week">WEEK 1 - MONDAY</div><div class="title"><div class="member" id="member">Chan's</div><div class="day"><span class="purple" id="daytitle">HAPPY STAY</span> DAY</div><div class="desc" id="desc">Full-body basics with maximum Channie approval.</div><div class="note" id="note">A healthy STAY makes a happy Channie.</div></div></section>
+    <section class="work"><h2>Today's workout</h2><div class="meta">2 ROUNDS - ABOUT 15-18 MIN</div><div class="path" id="moves"></div><div class="baby">BABY STAY - ONE ROUND - STILL COUNTS</div>
+<div class="work-actions">
 <button class="btn" onclick="startWorkout(2)">START WORKOUT</button><button class="btn alt" onclick="startWorkout(1)">I NEED BABY STAY TODAY</button>
 </div></section>
   </div>
   <div class="right-column">
-    <div class="photo" id="photo" data-label="HAN"><img id="memberArt" src="han-quokka.png" alt="HAN workout mascot art"></div>
-    <aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=17" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">HAN'S MIX</h3><div class="track" id="tracks"></div></section></aside>
+    <div class="photo" id="photo" data-label="CHAN"><img id="memberArt" src="wolfchan.png" alt="CHAN workout mascot art"></div>
+    <aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=18" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">CHAN'S MIX</h3><div class="track" id="tracks"></div></section></aside>
   </div>
 </div>
 
@@ -1096,6 +1142,7 @@ header,.hero,.content,.start,.screen{position:relative}
 <p><b>Reset Progress</b> clears workout/test history, CP, achievements, skipped/completed-day metadata and challenge state, but keeps your chosen SKZOO theme.</p>
 <div class="reset-actions">
 <button onclick="resetProgress()">RESET PROGRESS</button>
+<button onclick="forceWeekOneMonday()">START WEEK 1 FRESH</button>
 <button class="danger" onclick="resetEverything()">RESET EVERYTHING</button>
 </div>
 </div>
@@ -1125,27 +1172,27 @@ innie:{accent:"#7e9bc4",accent2:"#d8e3f1",art:"foxyin.png",label:"I.N"}
 };
 
 const workout={
-week:"WEEK 1 - WEDNESDAY",
-member:"Han's",
-title:'"I DON\'T WANNA"',
-desc:"Low-drama strength + mobility for the midweek struggle.",
-note:"Unfortunately, we are doing it anyway.",
-mix:"HAN'S MIX",
-tracks:["01 Get Cool","02 Awkward Silence","03 Mixtape : Time Out","04 Cover Me (cooldown)"]
+week:"WEEK 1 - MONDAY",
+member:"Chan's",
+title:"HAPPY STAY",
+desc:"Full-body basics with maximum Channie approval.",
+note:"A healthy STAY makes a happy Channie.",
+mix:"CHAN'S MIX",
+tracks:["01 MOUNTAINS","02 Chk Chk Boom","03 TOPLINE","04 Cover Me (cooldown)"]
 };
 const moves=[
-["Good Morning","Push your butt BACK. Imagine Lee Know judging the hinge."],
-["Wall Push-Up","Whole body together. No booty-first push-ups."],
-["Glute Bridge","Squeeze to lift. Felix brownie-making muscles."],
-["Standing Row Squeeze","Shoulders down, elbows back. Seungmin is watching."],
-["Cat-Cow","Slow and controlled. Han supports your floor era."]
+["Chair Squat","Sit back like Chan just pulled out a chair for you. Light tap - we are not moving into Chan's Room."],
+["Wall Push-Up","Whole body moves together. Changbin did not authorize the booty-first push-up."],
+["Standing Knee Drive","Tall posture. We are giving stage energy, not folding-laundry energy."],
+["Glute Bridge","Squeeze to lift. Felix brownie-making muscles would respect the commitment."],
+["Bird Dog","DO NOT SPILL CHRISTOPHER'S COFFEE. Keep those hips level."]
 ];
-let theme=(localStorage.getItem("happyChannieTheme")||"han"), sequence=[],idx=0,remaining=0,tick=null,paused=false,rounds=2,counts=[0,0,0,0,0],sessionAwarded=false;
+let theme=(localStorage.getItem("happyChannieTheme")||"chan"), sequence=[],idx=0,remaining=0,tick=null,paused=false,rounds=2,counts=[0,0,0,0,0],sessionAwarded=false;
 
 function el(id){ return document.getElementById(id); }
 
 const PROGRESS_KEY="happyChannieProgressV1";
-function freshProgress(){return {cp:0,completedDays:[],skippedDays:[],achievements:[],week:1,dayIndex:0,workoutsCompleted:0};}
+function freshProgress(){return {cp:0,completedDays:[],skippedDays:[],achievements:[],week:1,dayIndex:0,currentDay:"monday",workoutsCompleted:0};}
 function getProgress(){
  try{
    const raw=localStorage.getItem(PROGRESS_KEY);
@@ -1190,6 +1237,16 @@ function resetProgress(){
  localStorage.setItem(PROGRESS_KEY,JSON.stringify(freshProgress()));
  location.reload();
 }
+
+function forceWeekOneMonday(){
+ if(!confirm("Start fresh at Week 1 Monday? This clears all workout/test progress and returns you to 0 CP."))return;
+ const keepTheme=localStorage.getItem("happyChannieTheme")||"chan";
+ localStorage.clear();
+ localStorage.setItem("happyChannieTheme",keepTheme);
+ localStorage.setItem(PROGRESS_KEY,JSON.stringify(freshProgress()));
+ location.reload();
+}
+
 function resetEverything(){
  if(!confirm("Reset EVERYTHING, including your selected SKZOO theme?"))return;
  localStorage.clear();
@@ -1205,7 +1262,7 @@ function render(){
  el("daytitle").textContent=workout.title;
  el("desc").textContent=workout.desc;
  el("note").textContent=workout.note;
- el("memberArt").src=t.art+"?v=17";
+ el("memberArt").src=t.art+"?v=18";
  el("memberArt").alt=t.label+" workout mascot art";
  el("photo").dataset.label=t.label;
  el("mixtitle").textContent=workout.mix;
@@ -1218,7 +1275,7 @@ function render(){
 function setTheme(x){if(!themes[x])return;theme=x;if(!themes[theme])theme="han";
 render();show("today",document.querySelector(".nav button"))}
 function show(id,btn){["today","guide","progressScreen","menu","runner","complete"].forEach(x=>document.getElementById(x).classList.add("hidden"));document.getElementById(id).classList.remove("hidden");document.getElementById("nav").classList.toggle("hidden",id==="runner"||id==="complete");document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("on"));if(btn)btn.classList.add("on");window.scrollTo(0,0)}
-function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=17"}
+function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=18"}
 function startWorkout(r){setChannie(r===1?"low-energy":"active");sessionAwarded=false;rounds=r;counts=[0,0,0,0,0];sequence=[];for(let round=1;round<=r;round++){moves.forEach((m,i)=>{sequence.push({type:"move",mi:i,round,dur:40});if(!(round===r&&i===moves.length-1))sequence.push({type:"rest",mi:i,round,dur:20})})}idx=0;show("runner");loadStep()}
 function loadStep(){clearInterval(tick);paused=false;el("pauseBtn").textContent="Pause";if(idx>=sequence.length){setChannie("complete");if(!sessionAwarded){awardWorkout();sessionAwarded=true}show("complete");return}let s=sequence[idx];remaining=s.dur;updateRunner();tick=setInterval(()=>{if(!paused){remaining--;updateRunner();if(remaining<=0){if(s.type==="move")counts[s.mi]=Math.min(rounds,counts[s.mi]+1);idx++;loadStep()}}},1000)}
 function updateRunner(){let s=sequence[idx];setChannie(s.type==="rest"?"rest":"active");el("timer").textContent=remaining;if(s.type==="move"){el("phase").textContent="MOVE - ROUND "+s.round+" OF "+rounds;el("currentMove").textContent=moves[s.mi][0];el("formCue").textContent=moves[s.mi][1]}else{el("phase").textContent="REST";el("currentMove").textContent="Breathe. You earned it.";el("formCue").textContent="Rest means rest. Chan wants a healthy STAY, not bonus suffering."}let ns=sequence[idx+1];el("nexttext").textContent=ns?(ns.type==="move"?moves[ns.mi][0]+" - Round "+ns.round:moves[Math.min(ns.mi+1,4)][0]):"Finish line";renderChecklist(s)}
@@ -1232,7 +1289,7 @@ render();
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=17",{updateViaCache:"none"}).catch(err => {
+    navigator.serviceWorker.register("./sw.js?v=18",{updateViaCache:"none"}).catch(err => {
       console.warn("Service worker registration failed:", err);
     });
   });

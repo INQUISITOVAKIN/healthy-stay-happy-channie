@@ -1,4 +1,4 @@
-const CACHE="happy-channie-v17";
+const CACHE="happy-channie-v18";
 self.addEventListener("install",event=>{self.skipWaiting();});
 self.addEventListener("activate",event=>{
   event.waitUntil(
