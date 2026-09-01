@@ -1090,28 +1090,34 @@ header,.hero,.content,.start,.screen{position:relative}
   text-align:right;
 }
 
+
+/* ===== V6.3 DAY ADVANCE + DANCERACHA ===== */
+.dance-day{padding:18px 0 8px;display:flex;flex-direction:column;gap:14px}
+.dance-copy{font-size:13px;line-height:1.45}
+.dance-link{min-height:46px;border:0;border-radius:14px;background:#1d2235;color:white;font-weight:900}
+
 </style>
 </head>
 <body>
 <div class="app">
 <div class="bg-assets" aria-hidden="true">
-  <div class="bg-sticker clean01"><img src="bg-straykids.png?v=19"></div>
-  <div class="bg-sticker clean02"><img src="bg-idontwanna.png?v=19"></div>
-  <div class="bg-sticker clean03"><img src="bg-stay.png?v=19"></div>
-  <div class="bg-sticker clean04"><img src="bg-coffee.png?v=19"></div>
-  <div class="bg-sticker clean05"><img src="bg-coffeefirst.png?v=19"></div>
-  <div class="bg-sticker clean06"><img src="bg-onemore.png?v=19"></div>
+  <div class="bg-sticker clean01"><img src="bg-straykids.png?v=20"></div>
+  <div class="bg-sticker clean02"><img src="bg-idontwanna.png?v=20"></div>
+  <div class="bg-sticker clean03"><img src="bg-stay.png?v=20"></div>
+  <div class="bg-sticker clean04"><img src="bg-coffee.png?v=20"></div>
+  <div class="bg-sticker clean05"><img src="bg-coffeefirst.png?v=20"></div>
+  <div class="bg-sticker clean06"><img src="bg-onemore.png?v=20"></div>
 
-  <div class="bg-sticker clean07"><img src="bg-mixtape.png?v=19"></div>
-  <div class="bg-sticker clean08"><img src="bg-justshowing.png?v=19"></div>
-  <div class="bg-sticker clean09"><img src="bg-headphones.png?v=19"></div>
-  <div class="bg-sticker clean10"><img src="bg-letsgo.png?v=19"></div>
-  <div class="bg-sticker clean11"><img src="bg-stepout.png?v=19"></div>
+  <div class="bg-sticker clean07"><img src="bg-mixtape.png?v=20"></div>
+  <div class="bg-sticker clean08"><img src="bg-justshowing.png?v=20"></div>
+  <div class="bg-sticker clean09"><img src="bg-headphones.png?v=20"></div>
+  <div class="bg-sticker clean10"><img src="bg-letsgo.png?v=20"></div>
+  <div class="bg-sticker clean11"><img src="bg-stepout.png?v=20"></div>
 
-  <div class="bg-sticker tiny clean12"><img src="bg-purplecrown.png?v=19"></div>
-  <div class="bg-sticker tiny clean13"><img src="bg-bluetoothpaw.png?v=19"></div>
-  <div class="bg-sticker tiny clean14"><img src="bg-musicnote.png?v=19"></div>
-  <div class="bg-sticker tiny clean15"><img src="bg-sparkle.png?v=19"></div>
+  <div class="bg-sticker tiny clean12"><img src="bg-purplecrown.png?v=20"></div>
+  <div class="bg-sticker tiny clean13"><img src="bg-bluetoothpaw.png?v=20"></div>
+  <div class="bg-sticker tiny clean14"><img src="bg-musicnote.png?v=20"></div>
+  <div class="bg-sticker tiny clean15"><img src="bg-sparkle.png?v=20"></div>
 </div>
 <div class="ghost">Stray Kids</div>
 <header><div class="brand">Healthy STAY,<i>Happy Channie</i><div class="sub">15-20 minutes. Then coffee.</div></div><div class="cp" id="cp">0 CP</div></header>
@@ -1127,7 +1133,7 @@ header,.hero,.content,.start,.screen{position:relative}
   </div>
   <div class="right-column">
     <div class="photo" id="photo" data-label="CHAN"><img id="memberArt" src="wolfchan.png" alt="CHAN workout mascot art"></div>
-    <aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=19" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">CHAN'S MIX</h3><div class="track" id="tracks"></div></section></aside>
+    <aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=20" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">CHAN'S MIX</h3><div class="track" id="tracks"></div></section></aside>
   </div>
 </div>
 
@@ -1158,7 +1164,7 @@ header,.hero,.content,.start,.screen{position:relative}
 <button class="danger" onclick="resetEverything()">RESET EVERYTHING</button>
 </div>
 </div>
-<div class="buildmark">BUILD V6.2 - MONDAY RESET FIX</div></section></div>
+<div class="buildmark">BUILD V6.3 - DAY ADVANCE FIX</div></section></div>
 <div id="runner" class="screen runner hidden">
  <div class="phase" id="phase">MOVE</div><div class="big" id="currentMove">Good Morning</div><div class="timer" id="timer">40</div>
  <div class="form" id="formCue"></div><div class="next" id="nextbox"><b>UP NEXT:</b> <span id="nexttext"></span></div>
@@ -1183,22 +1189,65 @@ seungmin:{accent:"#d79a78",accent2:"#f2d9ca",art:"puppym.png",label:"SEUNGMIN"},
 innie:{accent:"#7e9bc4",accent2:"#d8e3f1",art:"foxyin.png",label:"I.N"}
 };
 
-const workout={
-week:"WEEK 1 - MONDAY",
-member:"Chan's",
-title:"HAPPY STAY",
-desc:"Full-body basics with maximum Channie approval.",
-note:"A healthy STAY makes a happy Channie.",
-mix:"CHAN'S MIX",
-tracks:["01 MOUNTAINS","02 Chk Chk Boom","03 TOPLINE","04 Cover Me (cooldown)"]
-};
-const moves=[
-["Chair Squat","Sit back like Chan just pulled out a chair for you. Light tap - we are not moving into Chan's Room."],
-["Wall Push-Up","Whole body moves together. Changbin did not authorize the booty-first push-up."],
-["Standing Knee Drive","Tall posture. We are giving stage energy, not folding-laundry energy."],
-["Glute Bridge","Squeeze to lift. Felix brownie-making muscles would respect the commitment."],
-["Bird Dog","DO NOT SPILL CHRISTOPHER'S COFFEE. Keep those hips level."]
+
+const week1Days=[
+  {
+    key:"monday",
+    week:"WEEK 1 - MONDAY",
+    member:"Chan's",
+    title:"HAPPY STAY",
+    desc:"Full-body basics with maximum Channie approval.",
+    note:"A healthy STAY makes a happy Channie.",
+    mix:"CHAN'S MIX",
+    tracks:["01 MOUNTAINS","02 Chk Chk Boom","03 TOPLINE","04 Cover Me (cooldown)"],
+    type:"circuit",
+    moves:[
+      ["Chair Squat","Sit back like Chan just pulled out a chair for you. Light tap - we are not moving into Chan's Room."],
+      ["Wall Push-Up","Whole body moves together. Changbin did not authorize the booty-first push-up."],
+      ["Standing Knee Drive","Tall posture. We are giving stage energy, not folding-laundry energy."],
+      ["Glute Bridge","Squeeze to lift. Felix brownie-making muscles would respect the commitment."],
+      ["Bird Dog","DO NOT SPILL CHRISTOPHER'S COFFEE. Keep those hips level."]
+    ]
+  },
+  {
+    key:"tuesday",
+    week:"WEEK 1 - TUESDAY",
+    member:"Hyunjin's",
+    title:"DANCERACHA",
+    desc:"Tuesday is for dancing. The video is the workout.",
+    note:"Drama is allowed. Suffering is optional.",
+    mix:"DANCERACHA MIX",
+    tracks:["01 S-Class","02 MANIAC","03 LALALALA","04 Chk Chk Boom"],
+    type:"dance",
+    video:"https://www.youtube.com/watch?v=HLMEDseC1_Y",
+    moves:[]
+  },
+  {
+    key:"wednesday",
+    week:"WEEK 1 - WEDNESDAY",
+    member:"Han's",
+    title:'"I DON\'T WANNA"',
+    desc:"Low-drama strength + mobility for the midweek struggle.",
+    note:"Unfortunately, we are doing it anyway.",
+    mix:"HAN'S MIX",
+    tracks:["01 Get Cool","02 Awkward Silence","03 Mixtape : Time Out","04 Cover Me (cooldown)"],
+    type:"circuit",
+    moves:[
+      ["Good Morning","Push your butt BACK. Imagine Lee Know judging the hinge."],
+      ["Wall Push-Up","Whole body together. No booty-first push-ups."],
+      ["Glute Bridge","Squeeze to lift. Felix brownie-making muscles."],
+      ["Standing Row Squeeze","Shoulders down, elbows back. Seungmin is watching."],
+      ["Cat-Cow","Slow and controlled. Han supports your floor era."]
+    ]
+  }
 ];
+
+function getCurrentDayData(){
+ const p=getProgress();
+ const idx=Math.max(0,Math.min(week1Days.length-1,p.dayIndex||0));
+ return week1Days[idx];
+}
+
 let theme=(localStorage.getItem("happyChannieTheme")||"chan"), sequence=[],idx=0,remaining=0,tick=null,paused=false,rounds=2,counts=[0,0,0,0,0],sessionAwarded=false;
 
 function el(id){ return document.getElementById(id); }
@@ -1234,11 +1283,36 @@ function updateProgressUI(){
    bar.style.width=pct+"%";
  }
 }
+
+function advanceChallengeDay(){
+ const p=getProgress();
+ const current=Math.max(0,p.dayIndex||0);
+ const currentKey=week1Days[Math.min(current,week1Days.length-1)].key;
+ if(!p.completedDays.includes(currentKey))p.completedDays.push(currentKey);
+ if(current < week1Days.length-1){
+   p.dayIndex=current+1;
+   p.currentDay=week1Days[p.dayIndex].key;
+ }
+ saveProgress(p);
+}
+
+function completeDanceDay(){
+ const p=getProgress();
+ p.cp+=3;
+ p.workoutsCompleted=(p.workoutsCompleted||0)+1;
+ saveProgress(p);
+ advanceChallengeDay();
+ renderWorkout();
+ updateProgressUI();
+ show("today",document.querySelector(".nav button"));
+}
+
 function awardWorkout(){
  const p=getProgress();
  p.cp+=3;
  p.workoutsCompleted=(p.workoutsCompleted||0)+1;
  saveProgress(p);
+ advanceChallengeDay();
  updateProgressUI();
 }
 function resetProgress(){
@@ -1271,13 +1345,15 @@ function applyTheme(){
  const t=themes[theme];
  document.documentElement.style.setProperty("--accent",t.accent);
  document.documentElement.style.setProperty("--accent2",t.accent2);
- el("memberArt").src=t.art+"?v=19";
+ el("memberArt").src=t.art+"?v=20";
  el("memberArt").alt=t.label+" workout mascot art";
  el("photo").dataset.label=t.label;
  try{localStorage.setItem("happyChannieTheme",theme)}catch(e){}
 }
 
 function renderWorkout(){
+ const workout=getCurrentDayData();
+ const moves=workout.moves||[];
  el("week").textContent=workout.week;
  el("member").textContent=workout.member;
  el("daytitle").textContent=workout.title;
@@ -1285,8 +1361,20 @@ function renderWorkout(){
  el("note").textContent=workout.note;
  el("mixtitle").textContent=workout.mix;
  el("tracks").innerHTML=workout.tracks.join("<br>");
- el("moves").innerHTML=moves.map((m,i)=>`<div class="move"><div class="n">${i+1}</div><div><div class="mn">${m[0]}</div><div class="cue">${m[1]}</div></div></div>`).join("");
- el("guideitems").innerHTML=moves.map(m=>`<div class="guideitem"><b>${m[0]}</b><br><small>${m[1]}</small></div>`).join("");
+ const baby=document.querySelector(".baby");
+ const actions=document.querySelector(".work-actions");
+
+ if(workout.type==="dance"){
+   el("moves").innerHTML=`<div class="dance-day"><div class="dance-copy"><b>DANCERACHA VIDEO DAY</b><br>The linked dance workout is the workout. No timer circuit today.</div><button class="dance-link" onclick="window.open('${workout.video}','_blank')">OPEN DANCE WORKOUT</button></div>`;
+   if(baby) baby.textContent="BABY STAY - FIRST ~2 SONGS - STILL COUNTS";
+   if(actions) actions.innerHTML=`<button onclick="window.open('${workout.video}','_blank')">OPEN DANCE WORKOUT</button><button onclick="completeDanceDay()">MARK TUESDAY COMPLETE</button>`;
+ }else{
+   el("moves").innerHTML=moves.map((m,i)=>`<div class="move"><div class="n">${i+1}</div><div><div class="mn">${m[0]}</div><div class="cue">${m[1]}</div></div></div>`).join("");
+   if(baby) baby.textContent="BABY STAY - ONE ROUND - STILL COUNTS";
+   if(actions) actions.innerHTML=`<button onclick="startWorkout(2)">START WORKOUT</button><button onclick="startWorkout(1)">I NEED BABY STAY TODAY</button>`;
+ }
+
+ el("guideitems").innerHTML=moves.length ? moves.map(m=>`<div class="guideitem"><b>${m[0]}</b><br><small>${m[1]}</small></div>`).join("") : `<div class="guideitem"><b>DanceRacha Day</b><br><small>Follow the linked video. Baby STAY = first ~2 songs.</small></div>`;
  updateProgressUI();
 }
 
@@ -1296,8 +1384,8 @@ function render(){
 }
 function setTheme(x){if(!themes[x])return;theme=x;applyTheme();show("today",document.querySelector(".nav button"))}
 function show(id,btn){["today","guide","progressScreen","menu","runner","complete"].forEach(x=>document.getElementById(x).classList.add("hidden"));document.getElementById(id).classList.remove("hidden");document.getElementById("nav").classList.toggle("hidden",id==="runner"||id==="complete");document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("on"));if(btn)btn.classList.add("on");window.scrollTo(0,0)}
-function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=19"}
-function startWorkout(r){setChannie(r===1?"low-energy":"active");sessionAwarded=false;rounds=r;counts=[0,0,0,0,0];sequence=[];for(let round=1;round<=r;round++){moves.forEach((m,i)=>{sequence.push({type:"move",mi:i,round,dur:40});if(!(round===r&&i===moves.length-1))sequence.push({type:"rest",mi:i,round,dur:20})})}idx=0;show("runner");loadStep()}
+function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=20"}
+function startWorkout(r){const moves=getCurrentDayData().moves||[];setChannie(r===1?"low-energy":"active");sessionAwarded=false;rounds=r;counts=[0,0,0,0,0];sequence=[];for(let round=1;round<=r;round++){moves.forEach((m,i)=>{sequence.push({type:"move",mi:i,round,dur:40});if(!(round===r&&i===moves.length-1))sequence.push({type:"rest",mi:i,round,dur:20})})}idx=0;show("runner");loadStep()}
 function loadStep(){clearInterval(tick);paused=false;el("pauseBtn").textContent="Pause";if(idx>=sequence.length){setChannie("complete");if(!sessionAwarded){awardWorkout();sessionAwarded=true}show("complete");return}let s=sequence[idx];remaining=s.dur;updateRunner();tick=setInterval(()=>{if(!paused){remaining--;updateRunner();if(remaining<=0){if(s.type==="move")counts[s.mi]=Math.min(rounds,counts[s.mi]+1);idx++;loadStep()}}},1000)}
 function updateRunner(){let s=sequence[idx];setChannie(s.type==="rest"?"rest":"active");el("timer").textContent=remaining;if(s.type==="move"){el("phase").textContent="MOVE - ROUND "+s.round+" OF "+rounds;el("currentMove").textContent=moves[s.mi][0];el("formCue").textContent=moves[s.mi][1]}else{el("phase").textContent="REST";el("currentMove").textContent="Breathe. You earned it.";el("formCue").textContent="Rest means rest. Chan wants a healthy STAY, not bonus suffering."}let ns=sequence[idx+1];el("nexttext").textContent=ns?(ns.type==="move"?moves[ns.mi][0]+" - Round "+ns.round:moves[Math.min(ns.mi+1,4)][0]):"Finish line";renderChecklist(s)}
 function renderChecklist(s){el("checklist").innerHTML=moves.map((m,i)=>{let c=counts[i],cls="";if(s.type==="move"&&s.mi===i)cls="current";else if(c>=rounds)cls="done";let mark=c>=rounds?"DONE":c+"/"+rounds;return `<div class="checkrow ${cls}"><span>${m[0]}</span><b>${mark}</b></div>`}).join("")}
@@ -1305,12 +1393,12 @@ function togglePause(){paused=!paused;el("pauseBtn").textContent=paused?"Resume"
 function skipStep(){let s=sequence[idx];if(s&&s.type==="move")counts[s.mi]=Math.min(rounds,counts[s.mi]+1);idx++;loadStep()}
 function backStep(){if(idx>0){idx--;loadStep()}}
 function exitWorkout(){clearInterval(tick);setChannie("ready");show("today",document.querySelector(".nav button"))}
-function finishWorkout(){clearInterval(tick);setChannie("ready");show("today",document.querySelector(".nav button"))}
+function finishWorkout(){clearInterval(tick);setChannie("ready");renderWorkout();show("today",document.querySelector(".nav button"))}
 render();
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=19",{updateViaCache:"none"}).catch(err => {
+    navigator.serviceWorker.register("./sw.js?v=20",{updateViaCache:"none"}).catch(err => {
       console.warn("Service worker registration failed:", err);
     });
   });
