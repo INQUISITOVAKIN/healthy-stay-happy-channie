@@ -1186,28 +1186,55 @@ header,.hero,.content,.start,.screen{position:relative}
   clear:both!important;
 }
 
+
+/* ===== V6.8 PLAYLIST BUTTON FIX ===== */
+.work.dance-mode .playlist-btn{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  min-height:40px!important;
+  padding:10px 14px!important;
+  border:1px solid #1d2235!important;
+  border-radius:13px!important;
+  background:transparent!important;
+  color:#1d2235!important;
+  font:900 11px/1.2 Arial,sans-serif!important;
+  letter-spacing:0!important;
+  text-decoration:none!important;
+  text-transform:none!important;
+  white-space:normal!important;
+  overflow:visible!important;
+  cursor:pointer!important;
+}
+.work.dance-mode .playlist-btn::before,
+.work.dance-mode .playlist-btn::after{
+  content:none!important;
+  display:none!important;
+}
+
 </style>
 </head>
 <body>
 <div class="app">
 <div class="bg-assets" aria-hidden="true">
-  <div class="bg-sticker clean01"><img src="bg-straykids.png?v=24"></div>
-  <div class="bg-sticker clean02"><img src="bg-idontwanna.png?v=24"></div>
-  <div class="bg-sticker clean03"><img src="bg-stay.png?v=24"></div>
-  <div class="bg-sticker clean04"><img src="bg-coffee.png?v=24"></div>
-  <div class="bg-sticker clean05"><img src="bg-coffeefirst.png?v=24"></div>
-  <div class="bg-sticker clean06"><img src="bg-onemore.png?v=24"></div>
+  <div class="bg-sticker clean01"><img src="bg-straykids.png?v=25"></div>
+  <div class="bg-sticker clean02"><img src="bg-idontwanna.png?v=25"></div>
+  <div class="bg-sticker clean03"><img src="bg-stay.png?v=25"></div>
+  <div class="bg-sticker clean04"><img src="bg-coffee.png?v=25"></div>
+  <div class="bg-sticker clean05"><img src="bg-coffeefirst.png?v=25"></div>
+  <div class="bg-sticker clean06"><img src="bg-onemore.png?v=25"></div>
 
-  <div class="bg-sticker clean07"><img src="bg-mixtape.png?v=24"></div>
-  <div class="bg-sticker clean08"><img src="bg-justshowing.png?v=24"></div>
-  <div class="bg-sticker clean09"><img src="bg-headphones.png?v=24"></div>
-  <div class="bg-sticker clean10"><img src="bg-letsgo.png?v=24"></div>
-  <div class="bg-sticker clean11"><img src="bg-stepout.png?v=24"></div>
+  <div class="bg-sticker clean07"><img src="bg-mixtape.png?v=25"></div>
+  <div class="bg-sticker clean08"><img src="bg-justshowing.png?v=25"></div>
+  <div class="bg-sticker clean09"><img src="bg-headphones.png?v=25"></div>
+  <div class="bg-sticker clean10"><img src="bg-letsgo.png?v=25"></div>
+  <div class="bg-sticker clean11"><img src="bg-stepout.png?v=25"></div>
 
-  <div class="bg-sticker tiny clean12"><img src="bg-purplecrown.png?v=24"></div>
-  <div class="bg-sticker tiny clean13"><img src="bg-bluetoothpaw.png?v=24"></div>
-  <div class="bg-sticker tiny clean14"><img src="bg-musicnote.png?v=24"></div>
-  <div class="bg-sticker tiny clean15"><img src="bg-sparkle.png?v=24"></div>
+  <div class="bg-sticker tiny clean12"><img src="bg-purplecrown.png?v=25"></div>
+  <div class="bg-sticker tiny clean13"><img src="bg-bluetoothpaw.png?v=25"></div>
+  <div class="bg-sticker tiny clean14"><img src="bg-musicnote.png?v=25"></div>
+  <div class="bg-sticker tiny clean15"><img src="bg-sparkle.png?v=25"></div>
 </div>
 <div class="ghost">Stray Kids</div>
 <header><div class="brand">Healthy STAY,<i>Happy Channie</i><div class="sub">15-20 minutes. Then coffee.</div></div><div class="cp" id="cp">0 CP</div></header>
@@ -1223,7 +1250,7 @@ header,.hero,.content,.start,.screen{position:relative}
   </div>
   <div class="right-column">
     <div class="photo" id="photo" data-label="CHAN"><img id="memberArt" src="wolfchan.png" alt="CHAN workout mascot art"></div>
-    <aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=24" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">CHAN'S MIX</h3><div class="track" id="tracks"></div></section></aside>
+    <aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=25" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">CHAN'S MIX</h3><div class="track" id="tracks"></div></section></aside>
   </div>
 </div>
 
@@ -1254,7 +1281,7 @@ header,.hero,.content,.start,.screen{position:relative}
 <button class="danger" onclick="resetEverything()">RESET EVERYTHING</button>
 </div>
 </div>
-<div class="buildmark">BUILD V6.7 - TUESDAY CARD EXPANSION</div></section></div>
+<div class="buildmark">BUILD V6.8 - PLAYLIST BUTTON FIX</div></section></div>
 <div id="runner" class="screen runner hidden">
  <div class="phase" id="phase">MOVE</div><div class="big" id="currentMove">Good Morning</div><div class="timer" id="timer">40</div>
  <div class="form" id="formCue"></div><div class="next" id="nextbox"><b>UP NEXT:</b> <span id="nexttext"></span></div>
@@ -1418,6 +1445,18 @@ function advanceChallengeDay(){
 }
 
 
+
+function openDancePlaylist(){
+ const workout=getCurrentDayData();
+ if(!workout || !workout.playlist)return;
+ try{
+   const p=getProgress();
+   p.lastDanceChoice="playlist";
+   saveProgress(p);
+ }catch(e){}
+ window.open(workout.playlist,"_blank","noopener");
+}
+
 function openDanceOption(url,choice){
  try{const p=getProgress();p.lastDanceChoice=choice;saveProgress(p)}catch(e){}
  window.open(url,"_blank");
@@ -1479,7 +1518,7 @@ function applyTheme(){
  const t=themes[theme];
  document.documentElement.style.setProperty("--accent",t.accent);
  document.documentElement.style.setProperty("--accent2",t.accent2);
- el("memberArt").src=t.art+"?v=24";
+ el("memberArt").src=t.art+"?v=25";
  el("memberArt").alt=t.label+" workout mascot art";
  el("photo").dataset.label=t.label;
  try{localStorage.setItem("happyChannieTheme",theme)}catch(e){}
@@ -1521,7 +1560,7 @@ function renderWorkout(){
    <div class="dance-option">
      <div class="dance-kicker">FEELING SOMETHING ELSE?</div>
      <div class="dance-copy">Choose another workout from the playlist.</div>
-     <button class="dance-link ghost" onclick="openDanceOption('${workout.playlist}','playlist')">BROWSE PLAYLIST</button>
+     <button type="button" class="dance-link ghost playlist-btn" onclick="openDancePlaylist()">BROWSE PLAYLIST</button>
    </div>
  </div>`;
  if(baby) baby.style.display="none";
@@ -1556,7 +1595,7 @@ function setTheme(x){
  show("today",document.querySelector(".nav button"));
 }
 function show(id,btn){["today","guide","progressScreen","menu","runner","complete"].forEach(x=>document.getElementById(x).classList.add("hidden"));document.getElementById(id).classList.remove("hidden");document.getElementById("nav").classList.toggle("hidden",id==="runner"||id==="complete");document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("on"));if(btn)btn.classList.add("on");window.scrollTo(0,0)}
-function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=24"}
+function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=25"}
 function startWorkout(r){currentMoves=getCurrentDayData().moves||[];setChannie(r===1?"low-energy":"active");sessionAwarded=false;rounds=r;counts=[0,0,0,0,0];sequence=[];for(let round=1;round<=r;round++){currentMoves.forEach((m,i)=>{sequence.push({type:"move",mi:i,round,dur:40});if(!(round===r&&i===moves.length-1))sequence.push({type:"rest",mi:i,round,dur:20})})}idx=0;show("runner");loadStep()}
 function loadStep(){clearInterval(tick);paused=false;el("pauseBtn").textContent="Pause";if(idx>=sequence.length){setChannie("complete");prepareCompletion();show("complete");return}let s=sequence[idx];remaining=s.dur;updateRunner();tick=setInterval(()=>{if(!paused){remaining--;updateRunner();if(remaining<=0){if(s.type==="move")counts[s.mi]=Math.min(rounds,counts[s.mi]+1);idx++;loadStep()}}},1000)}
 function updateRunner(){let s=sequence[idx];setChannie(s.type==="rest"?"rest":"active");el("timer").textContent=remaining;if(s.type==="move"){el("phase").textContent="MOVE - ROUND "+s.round+" OF "+rounds;el("currentMove").textContent=currentMoves[s.mi][0];el("formCue").textContent=currentMoves[s.mi][1]}else{el("phase").textContent="REST";el("currentMove").textContent="Breathe. You earned it.";el("formCue").textContent="Rest means rest. Chan wants a healthy STAY, not bonus suffering."}let ns=sequence[idx+1];el("nexttext").textContent=ns?(ns.type==="move"?currentMoves[ns.mi][0]+" - Round "+ns.round:currentMoves[Math.min(ns.mi+1,currentMoves.length-1)][0]):"Finish line";renderChecklist(s)}
@@ -1570,7 +1609,7 @@ render();
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=24",{updateViaCache:"none"}).catch(err => {
+    navigator.serviceWorker.register("./sw.js?v=25",{updateViaCache:"none"}).catch(err => {
       console.warn("Service worker registration failed:", err);
     });
   });
