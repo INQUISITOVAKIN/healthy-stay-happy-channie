@@ -1247,28 +1247,38 @@ header,.hero,.content,.start,.screen{position:relative}
 .day-receipt>span{color:#756d67}.tiny-remove{border:0;background:transparent;color:#a16b6b;font-weight:900;cursor:pointer;font-size:16px;padding:0 5px}
 @media(max-width:520px){.kudos-total{align-items:flex-start}.kudos-calendar{padding:7px}.dow,.cal-grid{gap:3px}.cal-day{border-radius:7px;padding:3px}.day-icons{font-size:12px}.date-num{font-size:9px}}
 
+
+/* ===== V6.13 RETROACTIVE KUDOS + FULL WEEK CALENDAR ===== */
+.kudos-form-top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.kudos-form-top h3{margin:0}
+.kudo-date-label{font:800 11px Arial;color:#6f6761;display:flex;align-items:center;gap:7px}
+#kudoDate{font-size:16px;border:1px solid #d7cec6;border-radius:9px;padding:7px 9px;background:white;color:#292522}
+.cal-day.adjacent-month{background:#f7f3ef;color:#a59a92}
+.cal-day.adjacent-month.worked{background:linear-gradient(145deg,#f7f3ef,var(--accent2));opacity:.88}
+.receipt-add{margin-top:6px;align-self:flex-start;border:1px dashed #bdb0a7;background:white;color:#514a45;border-radius:9px;padding:7px 10px;font-weight:900;cursor:pointer}
+
 </style>
 </head>
 <body>
 <div class="app">
 <div class="bg-assets" aria-hidden="true">
-  <div class="bg-sticker clean01"><img src="bg-straykids.png?v=29"></div>
-  <div class="bg-sticker clean02"><img src="bg-idontwanna.png?v=29"></div>
-  <div class="bg-sticker clean03"><img src="bg-stay.png?v=29"></div>
-  <div class="bg-sticker clean04"><img src="bg-coffee.png?v=29"></div>
-  <div class="bg-sticker clean05"><img src="bg-coffeefirst.png?v=29"></div>
-  <div class="bg-sticker clean06"><img src="bg-onemore.png?v=29"></div>
+  <div class="bg-sticker clean01"><img src="bg-straykids.png?v=30"></div>
+  <div class="bg-sticker clean02"><img src="bg-idontwanna.png?v=30"></div>
+  <div class="bg-sticker clean03"><img src="bg-stay.png?v=30"></div>
+  <div class="bg-sticker clean04"><img src="bg-coffee.png?v=30"></div>
+  <div class="bg-sticker clean05"><img src="bg-coffeefirst.png?v=30"></div>
+  <div class="bg-sticker clean06"><img src="bg-onemore.png?v=30"></div>
 
-  <div class="bg-sticker clean07"><img src="bg-mixtape.png?v=29"></div>
-  <div class="bg-sticker clean08"><img src="bg-justshowing.png?v=29"></div>
-  <div class="bg-sticker clean09"><img src="bg-headphones.png?v=29"></div>
-  <div class="bg-sticker clean10"><img src="bg-letsgo.png?v=29"></div>
-  <div class="bg-sticker clean11"><img src="bg-stepout.png?v=29"></div>
+  <div class="bg-sticker clean07"><img src="bg-mixtape.png?v=30"></div>
+  <div class="bg-sticker clean08"><img src="bg-justshowing.png?v=30"></div>
+  <div class="bg-sticker clean09"><img src="bg-headphones.png?v=30"></div>
+  <div class="bg-sticker clean10"><img src="bg-letsgo.png?v=30"></div>
+  <div class="bg-sticker clean11"><img src="bg-stepout.png?v=30"></div>
 
-  <div class="bg-sticker tiny clean12"><img src="bg-purplecrown.png?v=29"></div>
-  <div class="bg-sticker tiny clean13"><img src="bg-bluetoothpaw.png?v=29"></div>
-  <div class="bg-sticker tiny clean14"><img src="bg-musicnote.png?v=29"></div>
-  <div class="bg-sticker tiny clean15"><img src="bg-sparkle.png?v=29"></div>
+  <div class="bg-sticker tiny clean12"><img src="bg-purplecrown.png?v=30"></div>
+  <div class="bg-sticker tiny clean13"><img src="bg-bluetoothpaw.png?v=30"></div>
+  <div class="bg-sticker tiny clean14"><img src="bg-musicnote.png?v=30"></div>
+  <div class="bg-sticker tiny clean15"><img src="bg-sparkle.png?v=30"></div>
 </div>
 <div class="ghost">Stray Kids</div>
 <header><div class="brand">Healthy STAY,<i>Happy Channie</i><div class="sub">15-20 minutes. Then coffee.</div></div><div class="cp" id="cp">0 CP</div></header>
@@ -1284,7 +1294,7 @@ header,.hero,.content,.start,.screen{position:relative}
   </div>
   <div class="right-column">
     <div class="photo" id="photo" data-label="CHAN"><img id="memberArt" src="wolfchan.png" alt="CHAN workout mascot art"></div>
-    <aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=29" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">CHAN'S MIX</h3><div class="track" id="tracks"></div></section></aside>
+    <aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=30" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">CHAN'S MIX</h3><div class="track" id="tracks"></div></section></aside>
   </div>
 </div>
 
@@ -1305,7 +1315,10 @@ header,.hero,.content,.start,.screen{position:relative}
   </div>
 
   <div id="kudosForm" class="kudos-form hidden">
-    <h3>What did you do?</h3>
+    <div class="kudos-form-top">
+      <h3>What did you do?</h3>
+      <label class="kudo-date-label">For <input id="kudoDate" type="date" /></label>
+    </div>
     <div class="sticker-picks" id="stickerPicks">
       <button type="button" data-kind="laundry" onclick="pickKudo('laundry',this)">🧺 Laundry</button>
       <button type="button" data-kind="clean" onclick="pickKudo('clean',this)">🧽 Cleaned Something</button>
@@ -1347,7 +1360,7 @@ header,.hero,.content,.start,.screen{position:relative}
 <button class="danger" onclick="resetEverything()">RESET EVERYTHING</button>
 </div>
 </div>
-<div class="buildmark">BUILD V6.12 - STAY KUDOS BOARD</div></section></div>
+<div class="buildmark">BUILD V6.13 - RETRO KUDOS FULL WEEKS</div></section></div>
 <div id="runner" class="screen runner hidden">
  <div class="phase" id="phase">MOVE</div><div class="big" id="currentMove">Good Morning</div><div class="timer" id="timer">40</div>
  <div class="form" id="formCue"></div><div class="next" id="nextbox"><b>UP NEXT:</b> <span id="nexttext"></span></div>
@@ -1668,15 +1681,23 @@ const kudoKinds={
  laundry:["🧺","Laundry"],clean:["🧽","Cleaned Something"],dishes:["🍽️","Dishes"],bathroom:["🛁","Bathroom"],
  move:["🚶","Extra Movement"],thing:["⭐","I Did The Thing"],custom:["✏️","Custom"]
 };
-function openKudosForm(){el("kudosForm").classList.remove("hidden");pickKudo(selectedKudoKind,document.querySelector(`[data-kind="${selectedKudoKind}"]`));el("kudoNote").focus();}
-function closeKudosForm(){el("kudosForm").classList.add("hidden");el("kudoNote").value="";}
+function openKudosForm(date){
+ el("kudosForm").classList.remove("hidden");
+ pickKudo(selectedKudoKind,document.querySelector(`[data-kind="${selectedKudoKind}"]`));
+ const dateInput=el("kudoDate"); if(dateInput)dateInput.value=date||localDateKey();
+ el("kudoNote").focus();
+}
+function closeKudosForm(){el("kudosForm").classList.add("hidden");el("kudoNote").value="";if(el("kudoDate"))el("kudoDate").value="";}
 function pickKudo(kind,btn){
  selectedKudoKind=kudoKinds[kind]?kind:"thing";
  document.querySelectorAll(".sticker-picks button").forEach(b=>b.classList.remove("picked"));
  if(btn)btn.classList.add("picked");
 }
 function saveKudo(){
- const p=getProgress(),date=localDateKey(),note=(el("kudoNote").value||"").trim();
+ const chosen=(el("kudoDate")&&el("kudoDate").value)||localDateKey();
+ const today=localDateKey();
+ if(chosen>today){alert("Future-you has not done that yet. Pick today or an earlier date. 😂");return;}
+ const p=getProgress(),date=chosen,note=(el("kudoNote").value||"").trim();
  p.kudos=p.kudos||[];
  const todayCount=p.kudos.filter(k=>k.date===date).length;
  const earns=todayCount<3;
@@ -1699,16 +1720,23 @@ function renderKudosBoard(){
  const logs=p.workoutLog||[],kudos=p.kudos||[];
  let html=`<div class="cal-title"><button type="button" disabled>‹</button><b>${monthName}</b><button type="button" disabled>›</button></div>`;
  html+=`<div class="dow"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div><div class="cal-grid">`;
- for(let i=0;i<first.getDay();i++)html+=`<div class="cal-day blank"></div>`;
- for(let d=1;d<=last.getDate();d++){
-   const date=`${year}-${String(month+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
+
+ const gridStart=new Date(year,month,1-first.getDay());
+ const daysNeeded=Math.ceil((first.getDay()+last.getDate())/7)*7;
+
+ for(let i=0;i<daysNeeded;i++){
+   const cur=new Date(gridStart);cur.setDate(gridStart.getDate()+i);
+   const cy=cur.getFullYear(),cm=cur.getMonth(),cd=cur.getDate();
+   const date=`${cy}-${String(cm+1).padStart(2,"0")}-${String(cd).padStart(2,"0")}`;
    const dayLogs=logs.filter(x=>x.date===date),dayK=kudos.filter(x=>x.date===date);
    const done=dayLogs.some(x=>x.status==="completed"),skipped=dayLogs.some(x=>x.status==="skipped");
    const icons=[...(done?["✨"]:[]),...(skipped?["☁"]:[]),...dayK.slice(0,3).map(k=>k.emoji)];
-   const cls=["cal-day",date===localDateKey()?"today-mark":"",done?"worked":"",skipped?"skipped":""].filter(Boolean).join(" ");
-   html+=`<button type="button" class="${cls}" onclick="showDayReceipt('${date}')"><span class="date-num">${d}</span><span class="day-icons">${icons.join("")}${dayK.length>3?`+${dayK.length-3}`:""}</span></button>`;
+   const adjacent=cm!==month;
+   const cls=["cal-day",date===localDateKey()?"today-mark":"",done?"worked":"",skipped?"skipped":"",adjacent?"adjacent-month":""].filter(Boolean).join(" ");
+   html+=`<button type="button" class="${cls}" onclick="showDayReceipt('${date}')"><span class="date-num">${cd}</span><span class="day-icons">${icons.join("")}${dayK.length>3?`+${dayK.length-3}`:""}</span></button>`;
  }
  html+=`</div>`;cal.innerHTML=html;
+
  const thisMonthPrefix=`${year}-${String(month+1).padStart(2,"0")}`;
  const things=logs.filter(x=>x.date.startsWith(thisMonthPrefix)&&x.status==="completed").length+kudos.filter(x=>x.date.startsWith(thisMonthPrefix)).length;
  if(el("weekThings"))el("weekThings").textContent=`${things} things done this month`;
@@ -1719,7 +1747,8 @@ function showDayReceipt(date){
  let rows=[];
  logs.forEach(x=>rows.push(`<div>${x.status==="completed"?"✨":"☁"} <b>${x.title}</b> — ${x.status==="completed"?"Complete +3 CP":"Skipped · no penalty"}</div>`));
  ks.forEach(k=>rows.push(`<div>${k.emoji} <b>${k.label}</b>${k.note?` — ${escapeHtml(k.note)}`:""} ${k.cp?"+1 CP":"· sticker only"} <button type="button" class="tiny-remove" onclick="removeKudo(${k.id})">×</button></div>`));
- box.innerHTML=`<b>${pretty}</b>${rows.length?rows.join(""):`<span>Nothing here yet. Blank days are morally neutral. 😂</span>`}`;
+ const addAllowed=date<=localDateKey();
+ box.innerHTML=`<b>${pretty}</b>${rows.length?rows.join(""):`<span>Nothing here yet. Blank days are morally neutral. 😂</span>`}${addAllowed?`<button type="button" class="receipt-add" onclick="openKudosForm('${date}')">+ ADD KUDOS TO THIS DAY</button>`:""}`;
 }
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));}
 
@@ -1805,7 +1834,7 @@ function applyTheme(){
  const t=themes[theme];
  document.documentElement.style.setProperty("--accent",t.accent);
  document.documentElement.style.setProperty("--accent2",t.accent2);
- el("memberArt").src=t.art+"?v=29";
+ el("memberArt").src=t.art+"?v=30";
  el("memberArt").alt=t.label+" workout mascot art";
  el("photo").dataset.label=t.label;
  try{localStorage.setItem("happyChannieTheme",theme)}catch(e){}
@@ -1882,7 +1911,7 @@ function setTheme(x){
  show("today",document.querySelector(".nav button"));
 }
 function show(id,btn){["today","guide","progressScreen","menu","runner","complete"].forEach(x=>document.getElementById(x).classList.add("hidden"));document.getElementById(id).classList.remove("hidden");document.getElementById("nav").classList.toggle("hidden",id==="runner"||id==="complete");document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("on"));if(btn)btn.classList.add("on");if(id==="progressScreen")renderKudosBoard();window.scrollTo(0,0)}
-function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=29"}
+function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=30"}
 function startWorkout(r){currentMoves=getCurrentDayData().moves||[];setChannie(r===1?"low-energy":"active");sessionAwarded=false;rounds=r;counts=[0,0,0,0,0];sequence=[];for(let round=1;round<=r;round++){currentMoves.forEach((m,i)=>{sequence.push({type:"move",mi:i,round,dur:40});if(!(round===r&&i===moves.length-1))sequence.push({type:"rest",mi:i,round,dur:20})})}idx=0;show("runner");loadStep()}
 function loadStep(){clearInterval(tick);paused=false;el("pauseBtn").textContent="Pause";if(idx>=sequence.length){setChannie("complete");prepareCompletion();show("complete");return}let s=sequence[idx];remaining=s.dur;updateRunner();tick=setInterval(()=>{if(!paused){remaining--;updateRunner();if(remaining<=0){if(s.type==="move")counts[s.mi]=Math.min(rounds,counts[s.mi]+1);idx++;loadStep()}}},1000)}
 function updateRunner(){let s=sequence[idx];setChannie(s.type==="rest"?"rest":"active");el("timer").textContent=remaining;if(s.type==="move"){el("phase").textContent="MOVE - ROUND "+s.round+" OF "+rounds;el("currentMove").textContent=currentMoves[s.mi][0];el("formCue").textContent=currentMoves[s.mi][1]}else{el("phase").textContent="REST";el("currentMove").textContent="Breathe. You earned it.";el("formCue").textContent="Rest means rest. Chan wants a healthy STAY, not bonus suffering."}let ns=sequence[idx+1];el("nexttext").textContent=ns?(ns.type==="move"?currentMoves[ns.mi][0]+" - Round "+ns.round:currentMoves[Math.min(ns.mi+1,currentMoves.length-1)][0]):"Finish line";renderChecklist(s)}
@@ -1896,7 +1925,7 @@ render();
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=29",{updateViaCache:"none"}).catch(err => {
+    navigator.serviceWorker.register("./sw.js?v=30",{updateViaCache:"none"}).catch(err => {
       console.warn("Service worker registration failed:", err);
     });
   });
