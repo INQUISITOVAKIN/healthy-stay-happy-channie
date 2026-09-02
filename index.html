@@ -1221,23 +1221,23 @@ header,.hero,.content,.start,.screen{position:relative}
 <body>
 <div class="app">
 <div class="bg-assets" aria-hidden="true">
-  <div class="bg-sticker clean01"><img src="bg-straykids.png?v=27"></div>
-  <div class="bg-sticker clean02"><img src="bg-idontwanna.png?v=27"></div>
-  <div class="bg-sticker clean03"><img src="bg-stay.png?v=27"></div>
-  <div class="bg-sticker clean04"><img src="bg-coffee.png?v=27"></div>
-  <div class="bg-sticker clean05"><img src="bg-coffeefirst.png?v=27"></div>
-  <div class="bg-sticker clean06"><img src="bg-onemore.png?v=27"></div>
+  <div class="bg-sticker clean01"><img src="bg-straykids.png?v=28"></div>
+  <div class="bg-sticker clean02"><img src="bg-idontwanna.png?v=28"></div>
+  <div class="bg-sticker clean03"><img src="bg-stay.png?v=28"></div>
+  <div class="bg-sticker clean04"><img src="bg-coffee.png?v=28"></div>
+  <div class="bg-sticker clean05"><img src="bg-coffeefirst.png?v=28"></div>
+  <div class="bg-sticker clean06"><img src="bg-onemore.png?v=28"></div>
 
-  <div class="bg-sticker clean07"><img src="bg-mixtape.png?v=27"></div>
-  <div class="bg-sticker clean08"><img src="bg-justshowing.png?v=27"></div>
-  <div class="bg-sticker clean09"><img src="bg-headphones.png?v=27"></div>
-  <div class="bg-sticker clean10"><img src="bg-letsgo.png?v=27"></div>
-  <div class="bg-sticker clean11"><img src="bg-stepout.png?v=27"></div>
+  <div class="bg-sticker clean07"><img src="bg-mixtape.png?v=28"></div>
+  <div class="bg-sticker clean08"><img src="bg-justshowing.png?v=28"></div>
+  <div class="bg-sticker clean09"><img src="bg-headphones.png?v=28"></div>
+  <div class="bg-sticker clean10"><img src="bg-letsgo.png?v=28"></div>
+  <div class="bg-sticker clean11"><img src="bg-stepout.png?v=28"></div>
 
-  <div class="bg-sticker tiny clean12"><img src="bg-purplecrown.png?v=27"></div>
-  <div class="bg-sticker tiny clean13"><img src="bg-bluetoothpaw.png?v=27"></div>
-  <div class="bg-sticker tiny clean14"><img src="bg-musicnote.png?v=27"></div>
-  <div class="bg-sticker tiny clean15"><img src="bg-sparkle.png?v=27"></div>
+  <div class="bg-sticker tiny clean12"><img src="bg-purplecrown.png?v=28"></div>
+  <div class="bg-sticker tiny clean13"><img src="bg-bluetoothpaw.png?v=28"></div>
+  <div class="bg-sticker tiny clean14"><img src="bg-musicnote.png?v=28"></div>
+  <div class="bg-sticker tiny clean15"><img src="bg-sparkle.png?v=28"></div>
 </div>
 <div class="ghost">Stray Kids</div>
 <header><div class="brand">Healthy STAY,<i>Happy Channie</i><div class="sub">15-20 minutes. Then coffee.</div></div><div class="cp" id="cp">0 CP</div></header>
@@ -1253,7 +1253,7 @@ header,.hero,.content,.start,.screen{position:relative}
   </div>
   <div class="right-column">
     <div class="photo" id="photo" data-label="CHAN"><img id="memberArt" src="wolfchan.png" alt="CHAN workout mascot art"></div>
-    <aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=27" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">CHAN'S MIX</h3><div class="track" id="tracks"></div></section></aside>
+    <aside class="side"><section class="progress"><h3>HAPPY CHANNIE</h3><div class="wolf"><img id="channieArt" src="ready.png?v=28" alt="Happy Channie"></div><div class="level" id="levelLabel">LEVEL 1</div><div class="tiny" id="levelSub">0 CP - 11 CP to next level</div><div class="bar"><span></span></div><div class="tiny" id="unlockText">Fresh start</div></section><section class="mix"><h3 id="mixtitle">CHAN'S MIX</h3><div class="track" id="tracks"></div></section></aside>
   </div>
 </div>
 
@@ -1284,7 +1284,7 @@ header,.hero,.content,.start,.screen{position:relative}
 <button class="danger" onclick="resetEverything()">RESET EVERYTHING</button>
 </div>
 </div>
-<div class="buildmark">BUILD V6.10 - PLAYLIST ROOT CAUSE FIX</div></section></div>
+<div class="buildmark">BUILD V6.11 - THREE WEEK CHALLENGE</div></section></div>
 <div id="runner" class="screen runner hidden">
  <div class="phase" id="phase">MOVE</div><div class="big" id="currentMove">Good Morning</div><div class="timer" id="timer">40</div>
  <div class="form" id="formCue"></div><div class="next" id="nextbox"><b>UP NEXT:</b> <span id="nexttext"></span></div>
@@ -1310,18 +1310,11 @@ innie:{accent:"#7e9bc4",accent2:"#d8e3f1",art:"foxyin.png",label:"I.N"}
 };
 
 
-const week1Days=[
+const challengeDays=[
   {
-    key:"monday",
-    defaultTheme:"chan",
-    week:"WEEK 1 - MONDAY",
-    member:"Chan's",
-    title:"HAPPY STAY",
-    desc:"Full-body basics with maximum Channie approval.",
-    note:"A healthy STAY makes a happy Channie.",
-    mix:"CHAN'S MIX",
-    tracks:["01 MOUNTAINS","02 Chk Chk Boom","03 TOPLINE","04 Cover Me (cooldown)"],
-    type:"circuit",
+    key:"w1-monday", dayName:"Monday", defaultTheme:"chan", week:"WEEK 1 - MONDAY", member:"Chan's", title:"HAPPY STAY",
+    desc:"Full-body basics with maximum Channie approval.", note:"A healthy STAY makes a happy Channie.",
+    mix:"CHAN'S MIX", tracks:["01 MOUNTAINS","02 Chk Chk Boom","03 TOPLINE","04 Cover Me (cooldown)"], type:"circuit",
     moves:[
       ["Chair Squat","Sit back like Chan just pulled out a chair for you. Light tap - we are not moving into Chan's Room."],
       ["Wall Push-Up","Whole body moves together. Changbin did not authorize the booty-first push-up."],
@@ -1331,28 +1324,18 @@ const week1Days=[
     ]
   },
   {
- key:"tuesday", defaultTheme:"hyunjin", week:"WEEK 1 - TUESDAY", member:"DanceRacha", title:"DANCERACHA",
- desc:"Beginner-friendly SKZ dance cardio with choreography inspiration you can actually follow.",
- note:"Pick the version your coordination can handle today. It all counts.",
- mix:"DANCERACHA RULES",
- tracks:["Pick one.","Move your body.","Coordination is optional.","It counts."],
- type:"dance",
- featuredVideo:"https://youtu.be/LbxrPgB_0xw?si=tBvoRUL2gzty825V",
- babyVideo:"https://youtu.be/sUH8V-O2gcA?si=-9he4Qa0nJrgAk57",
- playlist:"https://youtube.com/playlist?list=PL3FZLpXjvJ5_2p8ZOwMLMn3lLf6qHK6V4&si=phAqoGyAADDvZFH0",
- moves:[]
-},
+    key:"w1-tuesday", dayName:"Tuesday", defaultTheme:"hyunjin", week:"WEEK 1 - TUESDAY", member:"DanceRacha", title:"DANCERACHA",
+    desc:"Beginner-friendly SKZ dance cardio with choreography inspiration you can actually follow.",
+    note:"Pick the version your coordination can handle today. It all counts.", mix:"DANCERACHA RULES",
+    tracks:["Pick one.","Move your body.","Coordination is optional.","It counts."], type:"dance",
+    featuredVideo:"https://youtu.be/LbxrPgB_0xw?si=tBvoRUL2gzty825V",
+    babyVideo:"https://youtu.be/sUH8V-O2gcA?si=-9he4Qa0nJrgAk57",
+    playlist:"https://youtube.com/playlist?list=PL3FZLpXjvJ5_2p8ZOwMLMn3lLf6qHK6V4&si=phAqoGyAADDvZFH0", moves:[]
+  },
   {
-    key:"wednesday",
-    defaultTheme:"han",
-    week:"WEEK 1 - WEDNESDAY",
-    member:"Han's",
-    title:'"I DON\'T WANNA"',
-    desc:"Low-drama strength + mobility for the midweek struggle.",
-    note:"Unfortunately, we are doing it anyway.",
-    mix:"HAN'S MIX",
-    tracks:["01 Get Cool","02 Awkward Silence","03 Mixtape : Time Out","04 Cover Me (cooldown)"],
-    type:"circuit",
+    key:"w1-wednesday", dayName:"Wednesday", defaultTheme:"han", week:"WEEK 1 - WEDNESDAY", member:"Han's", title:'"I DON\'T WANNA"',
+    desc:"Low-drama strength + mobility for the midweek struggle.", note:"Unfortunately, we are doing it anyway.",
+    mix:"HAN'S MIX", tracks:["01 Get Cool","02 Awkward Silence","03 Mixtape : Time Out","04 Cover Me (cooldown)"], type:"circuit",
     moves:[
       ["Good Morning","Push your butt BACK. Imagine Lee Know judging the hinge."],
       ["Wall Push-Up","Whole body together. No booty-first push-ups."],
@@ -1360,13 +1343,156 @@ const week1Days=[
       ["Standing Row Squeeze","Shoulders down, elbows back. Seungmin is watching."],
       ["Cat-Cow","Slow and controlled. Han supports your floor era."]
     ]
+  },
+  {
+    key:"w1-thursday", dayName:"Thursday", defaultTheme:"changbin", week:"WEEK 1 - THURSDAY", member:"Changbin's", title:"DWAEKKI POWER",
+    desc:"Beginner arms + core. Strong, controlled, and absolutely no gym-bro nonsense.", note:"Tiny dumbbells optional. Dwaekki-level determination required.",
+    mix:"BIN'S POWER MIX", tracks:["01 DOMINO","02 JJAM","03 Thunderous","04 Youtiful (cooldown)"], type:"circuit",
+    moves:[
+      ["Counter Push-Up","Hands on a sturdy counter. Chest travels toward it; your hips are not leading a separate expedition."],
+      ["Standing Punch-Out","Soft knees, brace your middle, punch straight ahead. Changbin energy; beginner joints."],
+      ["Standing Knee-to-Elbow","Bring knee toward the same-side elbow without folding yourself in half."],
+      ["Counter Plank","Body in one long line. Yes, this counts. No, Han says you do not have to enjoy it."],
+      ["Dead Bug","Opposite arm and leg. If coordination leaves the building, slow down - nobody is filming this."]
+    ]
+  },
+  {
+    key:"w1-friday", dayName:"Friday", defaultTheme:"chan", week:"WEEK 1 - FRIDAY", member:"Chan's", title:"WOLFGANG FRIDAY",
+    desc:"A light full-body victory lap to finish Week 1 without destroying Saturday.", note:"You made it through the week. WOOF WOOF.",
+    mix:"WOLFGANG MIX", tracks:["01 WOLFGANG","02 LALALALA","03 FAM","04 Haven (cooldown)"], type:"circuit",
+    moves:[
+      ["March in Place","Warm-up, not survival training. Chan wants a healthy STAY, not a deceased one."],
+      ["Chair Squat + Reach","Tap the chair, stand tall, reach up. Victory pose is encouraged."],
+      ["Standing Side Leg Lift","Small and controlled. Lee Know-level precision beats dramatic flailing."],
+      ["Wall Push-Up","Smooth reps. Friday is not the day to invent a new push-up species."],
+      ["Calf Raise","Rise, pause, lower. Maknae on Top; heels temporarily also on top."]
+    ]
+  },
+
+  {
+    key:"w2-monday", dayName:"Monday", defaultTheme:"felix", week:"WEEK 2 - MONDAY", member:"Felix's", title:"SUNSHINE START",
+    desc:"A gentler full-body Monday with enough movement to wake you up without declaring war.", note:"Brownie energy, but make it functional.",
+    mix:"FELIX MIX", tracks:["01 Sunshine","02 Blueprint","03 Surfin'","04 Secret Secret (cooldown)"], type:"circuit",
+    moves:[
+      ["Sit-to-Stand","Use the chair as your checkpoint. Stand tall, sit with control, repeat."],
+      ["Wall Angel","Back near the wall, slide arms up and down only as far as feels comfortable."],
+      ["Standing Knee Drive","Tall posture, controlled knee lift. Stage energy at approximately 8:07 a.m."],
+      ["Glute Bridge","Press through your feet and squeeze at the top. Brownie-making muscles reporting for duty."],
+      ["Heel-to-Toe Walk","Slow little line walk. Balance first; dignity is optional."]
+    ]
+  },
+  {
+    key:"w2-tuesday", dayName:"Tuesday", defaultTheme:"leeknow", week:"WEEK 2 - TUESDAY", member:"Lee Know's", title:"CONTROL FREAK",
+    desc:"Balance + lower body with clean, controlled movement instead of frantic cardio.", note:"Lee Know has standards. Fortunately, the standard today is just 'try.'",
+    mix:"LEE KNOW MIX", tracks:["01 Charmer","02 TASTE","03 Easy","04 Another Day (cooldown)"], type:"circuit",
+    moves:[
+      ["Reverse Lunge Tap","Small step back is enough. We are building legs, not auditioning for Thunderous choreography."],
+      ["Standing Side Leg Lift","Keep your torso tall and the movement small. No interpretive flailing."],
+      ["Chair Squat","Sit back, tap, stand. Your chair is support, not a permanent residence."],
+      ["Calf Raise","Rise, pause, lower slowly. Control the whole rep."],
+      ["Single-Leg Stand","Hover one foot and use a wall if needed. Falling over is not bonus cardio."]
+    ]
+  },
+  {
+    key:"w2-wednesday", dayName:"Wednesday", defaultTheme:"seungmin", week:"WEEK 2 - WEDNESDAY", member:"Seungmin's", title:"POSTURE POLICE",
+    desc:"Upper back, core, and mobility for the person who has been folded over a computer all week.", note:"Seungmin noticed your posture. Unfortunately.",
+    mix:"SEUNGMIN MIX", tracks:["01 Can't Stop","02 Gone Away","03 The View","04 Grow Up (cooldown)"], type:"circuit",
+    moves:[
+      ["Standing Row Squeeze","Elbows back, shoulders down. Seungmin has made one devastating comment; fix it."],
+      ["Wall Push-Up","Keep head, ribs, and hips moving together."],
+      ["Wall Angel","Move slowly and stay in a pain-free range. This is mobility, not punishment."],
+      ["Bird Dog","Opposite arm and leg; hips stay level. Coffee-spill rules remain in effect."],
+      ["Cat-Cow","Slowly round and arch. Your desk-chair spine says thank you."]
+    ]
+  },
+  {
+    key:"w2-thursday", dayName:"Thursday", defaultTheme:"in", week:"WEEK 2 - THURSDAY", member:"I.N's", title:"MAKNAE ON TOP",
+    desc:"Legs + balance with a sneaky little finisher.", note:"Cute does not mean easy. Apparently.",
+    mix:"I.N MIX", tracks:["01 Maknae On Top","02 CHEESE","03 Super Board","04 Mixtape : OH (cooldown)"], type:"circuit",
+    moves:[
+      ["Chair Squat + Calf Raise","Stand from the chair, then rise onto your toes. Two moves, one tiny betrayal."],
+      ["Side Step","Soft knees, toes forward. DanceRacha, not baby giraffe on roller skates."],
+      ["Standing Knee-to-Elbow","Bring knee and elbow toward each other with control."],
+      ["Reverse Lunge Tap","Tap one foot back, return, switch. Small range is completely valid."],
+      ["March Hold","March, but pause each knee at the top for one beat. Balance has entered the chat."]
+    ]
+  },
+  {
+    key:"w2-friday", dayName:"Friday", defaultTheme:"chan", week:"WEEK 2 - FRIDAY", member:"Chan's", title:"CHANNIE CHECK-IN",
+    desc:"A mixed full-body circuit with familiar moves and one tiny step up from Week 1.", note:"We are not chasing perfection. We are collecting Fridays.",
+    mix:"FRIDAY MIX", tracks:["01 Social Path","02 Booster","03 Astronaut","04 Haven (cooldown)"], type:"circuit",
+    moves:[
+      ["Good Morning","Hinge back with a long spine. Butt goes back; knees stay soft."],
+      ["Counter Push-Up","A little more challenge than the wall, still very much beginner territory."],
+      ["Chair Squat + Reach","Tap, stand, reach. Congratulations, choreography."],
+      ["Bird Dog","Slow opposite arm and leg. Christopher's coffee remains protected."],
+      ["March in Place","Finish moving, not dying. Very important distinction."]
+    ]
+  },
+
+  {
+    key:"w3-monday", dayName:"Monday", defaultTheme:"han", week:"WEEK 3 - MONDAY", member:"Han's", title:"JUST SHOWING UP",
+    desc:"Low-impact full body for a Monday that did not ask permission before arriving.", note:"The bar is showing up. You already cleared it.",
+    mix:"MONDAY SURVIVAL MIX", tracks:["01 MIROH","02 Any","03 Collision","04 19 (cooldown)"], type:"circuit",
+    moves:[
+      ["Side Step + Reach","Step side to side and add an easy overhead reach if your shoulders agree."],
+      ["Sit-to-Stand","Stand from the chair without rushing. Sit back down like you meant to."],
+      ["Standing Punch-Out","Brace lightly and punch straight ahead. Stress may leave through the fists."],
+      ["Glute Bridge","Lift, squeeze, lower. Floor time is a feature, not a bug."],
+      ["Dead Bug","Slow opposite limbs. Coordination can arrive whenever it is ready."]
+    ]
+  },
+  {
+    key:"w3-tuesday", dayName:"Tuesday", defaultTheme:"hyunjin", week:"WEEK 3 - TUESDAY", member:"DanceRacha", title:"DANCERACHA: ROUND TWO",
+    desc:"Your beginner-friendly dance day returns. Pick the version that sounds fun, not the one you think you 'should' do.",
+    note:"Coordination remains optional. Vibes remain mandatory.", mix:"DANCERACHA RULES",
+    tracks:["Pick one.","Keep it beginner-friendly.","Laugh at mistakes.","It still counts."], type:"dance",
+    featuredVideo:"https://youtu.be/LbxrPgB_0xw?si=tBvoRUL2gzty825V",
+    babyVideo:"https://youtu.be/sUH8V-O2gcA?si=-9he4Qa0nJrgAk57",
+    playlist:"https://youtube.com/playlist?list=PL3FZLpXjvJ5_2p8ZOwMLMn3lLf6qHK6V4&si=phAqoGyAADDvZFH0", moves:[]
+  },
+  {
+    key:"w3-wednesday", dayName:"Wednesday", defaultTheme:"changbin", week:"WEEK 3 - WEDNESDAY", member:"Changbin's", title:"TINY BUT MIGHTY",
+    desc:"Upper body + core with beginner-friendly strength moves and zero equipment required.", note:"Muscles are loading. Please enjoy the tiny progress bar.",
+    mix:"CHANGBIN MIX", tracks:["01 ITEM","02 COMFLEX","03 Freeze","04 Leave (cooldown)"], type:"circuit",
+    moves:[
+      ["Counter Push-Up","Whole body moves as one unit. Pick a surface height that lets you keep good form."],
+      ["Standing Row Squeeze","Pull elbows back and squeeze between the shoulder blades."],
+      ["Standing Punch-Out","Controlled punches, soft knees. Do not punch your monitor; we need the app."],
+      ["Counter Plank","Brace gently and keep one long line from head to heels."],
+      ["Standing Knee-to-Elbow","Slow crunch, tall reset. Core work without becoming one with the floor."]
+    ]
+  },
+  {
+    key:"w3-thursday", dayName:"Thursday", defaultTheme:"felix", week:"WEEK 3 - THURSDAY", member:"Felix's", title:"SUNSHINE MOBILITY",
+    desc:"A recovery-leaning mobility day so your body gets attention without another full send.", note:"Soft day. Still counts. Absolutely no guilt allowed.",
+    mix:"SOFT STAY MIX", tracks:["01 Star Lost","02 Mixtape : Time Out","03 Blueprint","04 Youtiful (cooldown)"], type:"circuit",
+    moves:[
+      ["Cat-Cow","Move slowly with your breath. There is no prize for speed."],
+      ["Good Morning","Gentle hip hinge to wake up the back of your legs."],
+      ["Wall Angel","Easy shoulder mobility. Stop before anything pinches."],
+      ["Heel-to-Toe Walk","Slow balance walk. Use a wall or counter whenever you want."],
+      ["Calf Raise","Rise and lower with control. A calm little finisher."]
+    ]
+  },
+  {
+    key:"w3-friday", dayName:"Friday", defaultTheme:"chan", week:"WEEK 3 - FRIDAY", member:"Chan's", title:"STEP OUT FRIDAY",
+    desc:"A full-body greatest-hits circuit to close three weeks stronger than you started.", note:"Three weeks of showing up deserves extremely smug coffee.",
+    mix:"STEP OUT MIX", tracks:["01 Victory Song","02 TA","03 Hall of Fame","04 Cover Me (cooldown)"], type:"circuit",
+    moves:[
+      ["Chair Squat + Reach","Tap, stand, reach tall. Strong and smooth."],
+      ["Counter Push-Up","Choose your counter height and keep your body moving together."],
+      ["Reverse Lunge Tap","Small step back, return, switch. Keep it controlled."],
+      ["Bird Dog","Opposite arm and leg. Coffee protection protocol: active."],
+      ["March Hold","Finish with controlled knee holds. You are allowed to look pleased with yourself."]
+    ]
   }
 ];
 
 function getCurrentDayData(){
  const p=getProgress();
- const idx=Math.max(0,Math.min(week1Days.length-1,p.dayIndex||0));
- return week1Days[idx];
+ const idx=Math.max(0,Math.min(challengeDays.length-1,p.dayIndex||0));
+ return challengeDays[idx];
 }
 
 let theme=(localStorage.getItem("happyChannieTheme")||"chan"), sequence=[],idx=0,remaining=0,tick=null,paused=false,rounds=2,counts=[0,0,0,0,0],sessionAwarded=false,currentMoves=[];
@@ -1374,12 +1500,27 @@ let theme=(localStorage.getItem("happyChannieTheme")||"chan"), sequence=[],idx=0
 function el(id){ return document.getElementById(id); }
 
 const PROGRESS_KEY="happyChannieProgressV1";
-function freshProgress(){return {cp:0,completedDays:[],skippedDays:[],achievements:[],week:1,dayIndex:0,currentDay:"monday",workoutsCompleted:0};}
+function freshProgress(){return {cp:0,completedDays:[],skippedDays:[],achievements:[],week:1,dayIndex:0,currentDay:"w1-monday",workoutsCompleted:0};}
 function getProgress(){
  try{
    const raw=localStorage.getItem(PROGRESS_KEY);
    if(!raw)return freshProgress();
-   return Object.assign(freshProgress(),JSON.parse(raw));
+   const p=Object.assign(freshProgress(),JSON.parse(raw));
+
+   // V6.11 migration: preserve existing Week 1 progress from the old 3-day build.
+   const oldMap={monday:"w1-monday",tuesday:"w1-tuesday",wednesday:"w1-wednesday"};
+   p.completedDays=(p.completedDays||[]).map(k=>oldMap[k]||k);
+   if(oldMap[p.currentDay])p.currentDay=oldMap[p.currentDay];
+
+   // The V6.10 build could mark Wednesday complete but had nowhere to advance.
+   if(p.completedDays.includes("w1-wednesday") && (p.dayIndex||0)<=2){
+     p.dayIndex=3;
+     p.currentDay="w1-thursday";
+     p.manualThemeDay=null;
+     p.manualTheme=null;
+     saveProgress(p);
+   }
+   return p;
  }catch(e){return freshProgress();}
 }
 function saveProgress(p){try{localStorage.setItem(PROGRESS_KEY,JSON.stringify(p))}catch(e){}}
@@ -1412,11 +1553,11 @@ function prepareCompletion(){
  const nextIndex=current+1;
  const btn=el("completeBtn");
  if(!btn)return;
- if(nextIndex<week1Days.length){
-   const nextName=week1Days[nextIndex].key.toUpperCase();
+ if(nextIndex<challengeDays.length){
+   const nextName=(challengeDays[nextIndex].dayName||challengeDays[nextIndex].key).toUpperCase();
    btn.textContent="CONTINUE TO "+nextName;
  }else{
-   btn.textContent="BACK TO TODAY";
+   btn.textContent="THREE WEEKS COMPLETE";
  }
 }
 
@@ -1436,13 +1577,13 @@ function completeCircuitAndContinue(){
 function advanceChallengeDay(){
  const p=getProgress();
  const current=Math.max(0,p.dayIndex||0);
- const currentKey=week1Days[Math.min(current,week1Days.length-1)].key;
+ const currentKey=challengeDays[Math.min(current,challengeDays.length-1)].key;
  if(!p.completedDays.includes(currentKey))p.completedDays.push(currentKey);
- if(current < week1Days.length-1){
+ if(current < challengeDays.length-1){
    p.manualThemeDay=null;
    p.manualTheme=null;
    p.dayIndex=current+1;
-   p.currentDay=week1Days[p.dayIndex].key;
+   p.currentDay=challengeDays[p.dayIndex].key;
  }
  saveProgress(p);
 }
@@ -1474,14 +1615,14 @@ function awardWorkout(){
  updateProgressUI();
 }
 function resetProgress(){
- if(!confirm("Reset workout progress and return to Week 1 Monday?"))return;
+ if(!confirm("Reset all workout progress and return to Week 1 Monday?"))return;
  localStorage.clear();
  localStorage.setItem(PROGRESS_KEY,JSON.stringify(freshProgress()));
  location.reload();
 }
 
 function forceWeekOneMonday(){
- if(!confirm("Start fresh at Week 1 Monday? This clears all workout/test progress and returns you to 0 CP."))return;
+ if(!confirm("Start fresh at Week 1 Monday? This clears all workout progress and returns you to 0 CP."))return;
  const keepTheme=localStorage.getItem("happyChannieTheme")||"chan";
  localStorage.clear();
  localStorage.setItem("happyChannieTheme",keepTheme);
@@ -1511,7 +1652,7 @@ function applyTheme(){
  const t=themes[theme];
  document.documentElement.style.setProperty("--accent",t.accent);
  document.documentElement.style.setProperty("--accent2",t.accent2);
- el("memberArt").src=t.art+"?v=27";
+ el("memberArt").src=t.art+"?v=28";
  el("memberArt").alt=t.label+" workout mascot art";
  el("photo").dataset.label=t.label;
  try{localStorage.setItem("happyChannieTheme",theme)}catch(e){}
@@ -1525,7 +1666,7 @@ function renderWorkout(){
  const workCard=document.querySelector(".work");
  if(workCard)workCard.classList.toggle("dance-mode",workout.type==="dance");
  const p=getProgress();
- if(el("challengeStatus"))el("challengeStatus").textContent=`Current challenge day: ${workout.week.replace("WEEK 1 - ","")} · ${p.cp} CP`;
+ if(el("challengeStatus"))el("challengeStatus").textContent=`Current challenge day: ${workout.week} · ${p.cp} CP`;
  el("week").textContent=workout.week;
  el("member").textContent=workout.member;
  el("daytitle").textContent=workout.title;
@@ -1553,11 +1694,11 @@ function renderWorkout(){
    <div class="dance-option">
      <div class="dance-kicker">FEELING SOMETHING ELSE?</div>
      <div class="dance-copy">Choose another workout from the playlist.</div>
-     <a class="dance-link playlist-btn" href="https://youtube.com/playlist?list=PL3FZLpXjvJ5_2p8ZOwMLMn3lLf6qHK6V4&amp;si=phAqoGyAADDvZFH0" target="_blank" rel="noopener noreferrer">BROWSE PLAYLIST</a>
+     <a class="dance-link playlist-btn" href="${workout.playlist}" target="_blank" rel="noopener noreferrer">BROWSE PLAYLIST</a>
    </div>
  </div>`;
  if(baby) baby.style.display="none";
- if(actions) actions.innerHTML=`<button onclick="completeDanceDay()">MARK TUESDAY COMPLETE</button>`;
+ if(actions) actions.innerHTML=`<button onclick="completeDanceDay()">MARK ${workout.dayName.toUpperCase()} COMPLETE</button>`;
 }else{
  if(baby) baby.style.display="";
 
@@ -1588,7 +1729,7 @@ function setTheme(x){
  show("today",document.querySelector(".nav button"));
 }
 function show(id,btn){["today","guide","progressScreen","menu","runner","complete"].forEach(x=>document.getElementById(x).classList.add("hidden"));document.getElementById(id).classList.remove("hidden");document.getElementById("nav").classList.toggle("hidden",id==="runner"||id==="complete");document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("on"));if(btn)btn.classList.add("on");window.scrollTo(0,0)}
-function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=27"}
+function setChannie(state){const x=el("channieArt");if(x)x.src=state+".png?v=28"}
 function startWorkout(r){currentMoves=getCurrentDayData().moves||[];setChannie(r===1?"low-energy":"active");sessionAwarded=false;rounds=r;counts=[0,0,0,0,0];sequence=[];for(let round=1;round<=r;round++){currentMoves.forEach((m,i)=>{sequence.push({type:"move",mi:i,round,dur:40});if(!(round===r&&i===moves.length-1))sequence.push({type:"rest",mi:i,round,dur:20})})}idx=0;show("runner");loadStep()}
 function loadStep(){clearInterval(tick);paused=false;el("pauseBtn").textContent="Pause";if(idx>=sequence.length){setChannie("complete");prepareCompletion();show("complete");return}let s=sequence[idx];remaining=s.dur;updateRunner();tick=setInterval(()=>{if(!paused){remaining--;updateRunner();if(remaining<=0){if(s.type==="move")counts[s.mi]=Math.min(rounds,counts[s.mi]+1);idx++;loadStep()}}},1000)}
 function updateRunner(){let s=sequence[idx];setChannie(s.type==="rest"?"rest":"active");el("timer").textContent=remaining;if(s.type==="move"){el("phase").textContent="MOVE - ROUND "+s.round+" OF "+rounds;el("currentMove").textContent=currentMoves[s.mi][0];el("formCue").textContent=currentMoves[s.mi][1]}else{el("phase").textContent="REST";el("currentMove").textContent="Breathe. You earned it.";el("formCue").textContent="Rest means rest. Chan wants a healthy STAY, not bonus suffering."}let ns=sequence[idx+1];el("nexttext").textContent=ns?(ns.type==="move"?currentMoves[ns.mi][0]+" - Round "+ns.round:currentMoves[Math.min(ns.mi+1,currentMoves.length-1)][0]):"Finish line";renderChecklist(s)}
@@ -1602,7 +1743,7 @@ render();
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js?v=27",{updateViaCache:"none"}).catch(err => {
+    navigator.serviceWorker.register("./sw.js?v=28",{updateViaCache:"none"}).catch(err => {
       console.warn("Service worker registration failed:", err);
     });
   });
